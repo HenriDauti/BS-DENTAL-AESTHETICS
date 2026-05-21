@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useLang } from "@/i18n/LanguageContext";
 import { CLINIC } from "@/i18n/translations";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logoraw.jpeg";
 
 const navLinks = [
   { to: "/", key: "home" as const },

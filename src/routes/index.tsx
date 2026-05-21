@@ -57,9 +57,18 @@ function HomePage() {
       <section className="bg-background py-24">
         <div className="container-x">
           <SectionHeader eyebrow={t.home.servicesEyebrow} title={t.home.servicesTitle} subtitle={t.home.servicesSubtitle} />
-          <div className="mt-16 grid gap-px overflow-hidden bg-border md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-16 grid gap-px overflow-hidden bg-border grid-cols-1 md:grid-cols-2 lg:grid-cols-6">
             {services.map((s, i) => (
-              <Link key={s.slug} to="/sherbimet/$slug" params={{ slug: s.slug }} className="group flex flex-col bg-background p-8 transition-colors hover:bg-muted">
+              <Link
+                key={s.slug}
+                to="/sherbimet/$slug"
+                params={{ slug: s.slug }}
+                className={`group flex flex-col bg-background p-8 transition-colors hover:bg-muted ${
+                  i < 3 ? "lg:col-span-2" : "lg:col-span-3"
+                } ${
+                  i === services.length - 1 && services.length % 2 !== 0 ? "md:col-span-2" : ""
+                }`}
+              >
                 <span className="font-serif text-4xl text-accent/40 transition-colors group-hover:text-accent">0{i + 1}</span>
                 <h3 className="mt-4 font-serif text-2xl text-primary">{s.title}</h3>
                 <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{s.short}</p>
@@ -189,7 +198,7 @@ function HomePage() {
               <figure key={tm.name} className="relative border border-border bg-muted/40 p-8">
                 <Quote className="absolute right-6 top-6 text-accent/30" size={36} />
                 <blockquote className="font-serif text-lg leading-relaxed text-primary md:text-xl">
-                  “{lang === "sq" ? tm.quote : tm.quoteEn}”
+                  "{lang === "sq" ? tm.quote : tm.quoteEn}"
                 </blockquote>
                 <figcaption className="mt-6 flex items-center gap-3">
                   <span className="h-px w-8 bg-accent" />

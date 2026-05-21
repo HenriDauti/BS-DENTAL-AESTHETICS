@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Instagram, Mail, MapPin, Clock } from "lucide-react";
 import { useLang } from "@/i18n/LanguageContext";
 import { CLINIC } from "@/i18n/translations";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logoraw.jpeg";
 
 export function Footer() {
   const { t } = useLang();
