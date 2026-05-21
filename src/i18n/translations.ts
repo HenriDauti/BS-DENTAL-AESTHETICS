@@ -3,7 +3,7 @@ export type Lang = "sq" | "en";
 export const translations = {
   sq: {
     nav: {
-      home: "Ballina",
+      home: "Kryefaqja",
       about: "Rreth Nesh",
       services: "Shërbimet",
       gallery: "Galeria",
@@ -17,7 +17,7 @@ export const translations = {
       bookConsultation: "Rezervo Konsultë",
       contactUs: "Na kontaktoni",
       hours: "Orari",
-      hoursValue: "E Hënë – E Shtunë: 09:00–14:00 & 16:00–20:00",
+      hoursValue: "E Hënë – E Diel: 09:00–20:00",
       address: "Adresa",
       addressValue: "Rruga Joklin Persi, Kashar, Tiranë",
       email: "Email",
@@ -57,7 +57,7 @@ export const translations = {
       processSubtitle:
         "Çdo trajtim fillon me dëgjim të kujdesshëm dhe vazhdon me një plan të personalizuar, transparent dhe pa surpriza.",
       process: [
-        { title: "Konsulta falas", body: "Dëgjojmë nevojat tuaja, ekzaminim klinik dhe diagnozë e detajuar." },
+        { title: "Konsulta fillestare", body: "Dëgjojmë nevojat tuaja, ekzaminim klinik dhe diagnozë e detajuar." },
         { title: "Plani i personalizuar", body: "Hartojmë një plan trajtimi transparent me kosto, faza dhe afate të qarta." },
         { title: "Trajtimi", body: "Realizohet me protokolle të rrepta sterilizimi dhe teknologji moderne." },
         { title: "Kujdesi pas trajtimit", body: "Kontrolle periodike dhe këshilla për ruajtjen e rezultateve afatgjata." },
@@ -73,18 +73,36 @@ export const translations = {
       testimonialsTitle: "Përvoja që na bën krenarë",
       faqEyebrow: "Pyetjet më të shpeshta",
       faqTitle: "Çfarë duhet të dini para vizitës",
+      faqSubtitle:
+        "Kemi mbledhur përgjigjet për pyetjet që dëgjojmë më shpesh — që vizita juaj të fillojë me besim dhe qetësi.",
       faq: [
-        { q: "A ofroni konsultë falas?", a: "Po. Konsulta e parë është pa pagesë dhe pa angazhim — vlerësojmë gjendjen tuaj dhe ju paraqesim planin më të përshtatshëm." },
-        { q: "Sa kohë zgjat një trajtim me veneers?", a: "Zakonisht 2–3 vizita brenda 7–14 ditëve, në varësi të numrit të dhëmbëve dhe planit estetik." },
-        { q: "A janë mbushësit e buzëve të sigurt?", a: "Po. Përdorim vetëm hijaluronik premium të certifikuar, me protokolle klinike të dëshmuara dhe rezultate natyrale." },
-        { q: "Si mund të rezervoj një takim?", a: "Mund të na shkruani në email ose Instagram — ju kontaktojmë brenda 24 orëve për të konfirmuar datën." },
+        {
+          q: "Si mund të rezervoj një takim?",
+          a: "Na shkruani në email ose Instagram dhe do t'ju konfirmojmë datën brenda 24 orëve. Preferoni të vini personalisht? Jeni gjithmonë të mirëpritur.",
+        },
+        {
+          q: "Sa vizita kërkon një trajtim me veneers?",
+          a: "Numri i vizitave ndryshon sipas rastit dhe diskutohet në detaje gjatë konsultës së parë. Gjithçka planifikohet me kujdes, duke respektuar plotësisht orarin tuaj.",
+        },
+        {
+          q: "Çfarë materiale përdorni?",
+          a: "Përdorim vetëm materiale të certifikuara ndërkombëtarisht — porcelan Emax, zirkonia dhe hijaluronik premium — të njëjtat standarde që gjenden në klinikat europiane.",
+        },
+        {
+          q: "A është trajtimi i dhimbshëm?",
+          a: "Kryejmë trajtimet me anestezi lokale aty ku nevojitet dhe me teknika minimalisht invazive, duke siguruar komoditetin tuaj gjatë gjithë procedurës.",
+        },
+        {
+          q: "Sa kohë zgjasin rezultatet?",
+          a: "Veneers dhe implantet janë zgjidhje afatgjata — me kujdesin e duhur pas trajtimit, rezultatet ruajnë cilësinë e tyre për shumë vite.",
+        },
       ],
       ctaTitle: "Gati për buzëqeshjen tënde të re?",
       ctaSubtitle: "Rezervo një konsultë dhe le të krijojmë së bashku planin tënd të trajtimit.",
     },
     about: {
       eyebrow: "Rreth Nesh",
-      title: "Një klinikë ku stomatologjia takon estetikën",
+      title: "Ku stomatologjia takon estetikën",
       intro:
         "BS Dental Clinic & Aesthetics u themelua me një vizion të qartë: të ofrojë kujdes dentar të standardit më të lartë, të kombinuar me ekspertizë në mjekësi estetike, në një mjedis ku pacienti ndihet i kuptuar dhe i kujdesur.",
       mission:
@@ -98,11 +116,18 @@ export const translations = {
       servicesPreviewTitle: "Shërbimet tona",
       servicesPreviewBody:
         "Një gamë e plotë trajtimesh dentare dhe estetike, të dizajnuara për t'iu përshtatur çdo nevoje.",
-      doctorsTitle: "Mjekët tanë",
-      doctors: [
-        { name: "Dr. Bia Sinani", role: "Mjeke Stomatologe", bio: "E specializuar në dentistri estetike dhe trajtime estetike të fytyrës, Dr. Bia sjell një sy artistik dhe një qasje të kujdesshme ndaj çdo pacienti." },
-        { name: "Dr. Miti Sinani", role: "Mjek Stomatolog", bio: "Me ekspertizë në endodonti, protetikë dhe implante, Dr. Miti përqendrohet në zgjidhje afatgjata që ruajnë shëndetin dhe funksionin natyral." },
+      servicesBody:
+        "Në BS Dental Clinic & Aesthetics ofrojmë një gamë të plotë shërbimesh dentare dhe estetike, duke përdorur teknologji bashkëkohore dhe materiale të certifikuara ndërkombëtarisht. Fokusi ynë është gjithmonë trajtimi i problemit aktual, por edhe ruajtja e funksionit dhe harmonisë natyrale afatgjatë. Çdo trajtim kryhet me kujdesin maksimal ndaj pacientit.",
+      missionEyebrow: "Filozofia jonë",
+      missionTitle: "Misioni Ynë",
+      missionBody:
+        "Në BS Dental Clinic & Aesthetics, misioni ynë është të mbajmë të njëjtin standard me klinikat më të specializuara europiane. Na kujdeset të krijojmë buzëqeshje që janë funksionale, të harmonizuara dhe plotësisht të personalizuara — art dhe shkencë në të njëjtën kohë, gjithmonë me përkushtim ndaj çdo detaji.",
+      missionPoints: [
+        { title: "Standard i Lartë", body: "Rezultate të dëshmuara dhe standarde që flasin vetë." },
+        { title: "Shkencë dhe Art", body: "Harmonizim i plotë — estetikë, funksion dhe teknologji bashkëkohore." },
+        { title: "Rezultate Afatgjata", body: "Trajtime minimalisht invazive që ruajnë estetikën dhe komoditetin ndaj pacientit." },
       ],
+      quote: "Bukuria e vërtetë fillon me shëndet — dhe çdo buzëqeshje e shëndetshme fillon me kujdes të vërtetë.",
       valuesTitle: "Vlerat tona",
       values: [
         { title: "Cilësi", body: "Materiale dhe teknika të nivelit europian." },
@@ -166,7 +191,7 @@ export const translations = {
       eyebrow: "Kontakt",
       title: "Le të bisedojmë",
       subtitle:
-        "Plotësoni një email për të rezervuar konsultën tuaj falas ose për të mësuar më shumë rreth shërbimeve tona.",
+        "Plotësoni një email për të rezervuar takimin tuaj ose për të mësuar më shumë rreth shërbimeve tona.",
       emailCta: "Na shkruani një email",
       info: "Informacion kontakti",
       map: "Vendndodhja jonë",
@@ -196,7 +221,14 @@ export const translations = {
     },
   },
   en: {
-    nav: { home: "Home", about: "About", services: "Services", gallery: "Gallery", contact: "Contact", book: "Book Appointment" },
+    nav: {
+      home: "Home",
+      about: "About",
+      services: "Services",
+      gallery: "Gallery",
+      contact: "Contact",
+      book: "Book Appointment",
+    },
     common: {
       learnMore: "Learn more",
       viewAll: "View all",
@@ -204,7 +236,7 @@ export const translations = {
       bookConsultation: "Book a Consultation",
       contactUs: "Contact us",
       hours: "Hours",
-      hoursValue: "Mon – Sat: 09:00–14:00 & 16:00–20:00",
+      hoursValue: "Monday – Sunday: 09:00–20:00",
       address: "Address",
       addressValue: "Rruga Joklin Persi, Kashar, Tirana",
       email: "Email",
@@ -244,7 +276,7 @@ export const translations = {
       processSubtitle:
         "Every treatment begins with careful listening and continues with a personalised, transparent plan — no surprises.",
       process: [
-        { title: "Free consultation", body: "We listen to your needs, perform a clinical exam and provide a detailed diagnosis." },
+        { title: "Initial consultation", body: "We listen to your needs, perform a clinical exam and provide a detailed diagnosis." },
         { title: "Personal plan", body: "A transparent plan with clear costs, phases and timeline tailored to you." },
         { title: "Treatment", body: "Carried out with strict sterilisation protocols and modern technology." },
         { title: "Aftercare", body: "Regular check-ups and guidance to keep your results beautiful long-term." },
@@ -260,11 +292,29 @@ export const translations = {
       testimonialsTitle: "Stories that make us proud",
       faqEyebrow: "Frequently asked questions",
       faqTitle: "What to know before your visit",
+      faqSubtitle:
+        "We've answered the questions we hear most often — so you arrive informed, relaxed and ready.",
       faq: [
-        { q: "Do you offer a free consultation?", a: "Yes. The first consultation is free and with no commitment — we assess your situation and present the most suitable plan." },
-        { q: "How long does a veneer treatment take?", a: "Typically 2–3 visits within 7–14 days, depending on the number of teeth and the aesthetic plan." },
-        { q: "Are lip fillers safe?", a: "Yes. We only use certified premium hyaluronic acid with proven clinical protocols and natural-looking results." },
-        { q: "How can I book an appointment?", a: "Send us an email or a message on Instagram — we'll reply within 24 hours to confirm your date." },
+        {
+          q: "How can I book an appointment?",
+          a: "Send us an email or a message on Instagram and we'll confirm your date within 24 hours. Prefer to drop by in person? You're always welcome.",
+        },
+        {
+          q: "How many visits does a veneer treatment require?",
+          a: "The number of visits varies depending on each individual case and is discussed in detail at your first appointment, always planned around your schedule.",
+        },
+        {
+          q: "What materials do you use?",
+          a: "We use only internationally certified materials — Emax porcelain, zirconia and premium hyaluronic acid — the same standards found in leading European clinics.",
+        },
+        {
+          q: "Is the treatment painful?",
+          a: "Treatments are performed with local anaesthesia where needed and minimally invasive techniques, ensuring your comfort throughout the entire procedure.",
+        },
+        {
+          q: "How long do results last?",
+          a: "Veneers and implants are long-term solutions — with proper aftercare, results maintain their quality for many years.",
+        },
       ],
       ctaTitle: "Ready for your new smile?",
       ctaSubtitle: "Book a consultation and let's design your treatment plan together.",
@@ -285,11 +335,18 @@ export const translations = {
       servicesPreviewTitle: "Our services",
       servicesPreviewBody:
         "A complete range of dental and aesthetic treatments, designed to fit every need.",
-      doctorsTitle: "Our doctors",
-      doctors: [
-        { name: "Dr. Bia Sinani", role: "Dentist", bio: "Specialised in aesthetic dentistry and facial aesthetic treatments, Dr. Bia brings an artistic eye and a careful approach to every patient." },
-        { name: "Dr. Miti Sinani", role: "Dentist", bio: "With expertise in endodontics, prosthetics and implants, Dr. Miti focuses on long-term solutions that preserve natural health and function." },
+      servicesBody:
+        "At BS Dental Clinic & Aesthetics we offer a complete range of dental and aesthetic treatments, using contemporary technology and internationally certified materials. Our focus is always on treating the immediate concern while preserving long-term natural function and harmony. Every treatment is carried out with maximum care for the patient.",
+      missionEyebrow: "Our philosophy",
+      missionTitle: "Our Mission",
+      missionBody:
+        "At BS Dental Clinic & Aesthetics, our mission is to hold ourselves to the same standard as Europe's leading specialist clinics. We are committed to creating smiles that are functional, harmonious and personal — art and science in equal measure, always with an eye for every detail.",
+      missionPoints: [
+        { title: "High Standard", body: "Proven results and standards that speak for themselves." },
+        { title: "Science & Art", body: "Full harmonisation — aesthetics, function and modern technology." },
+        { title: "Long-lasting Results", body: "Minimally invasive treatments that preserve aesthetics and patient comfort." },
       ],
+      quote: "True beauty begins with health — and every healthy smile begins with genuine care.",
       valuesTitle: "Our values",
       values: [
         { title: "Quality", body: "European-grade materials and techniques." },
@@ -303,11 +360,41 @@ export const translations = {
       title: "Dental services with the latest technology",
       subtitle: "A complete range of dental and aesthetic services, designed to fit every patient's needs.",
       items: [
-        { slug: "dentistri-estetike", title: "Aesthetic Dentistry", short: "Veneers, facets and aesthetic reconstructions for a harmonious smile.", full: "Aesthetic dentistry combines dental science with art to create natural, harmonious smiles. We offer Emax porcelain veneers, composite facets, laser whitening and aesthetic reconstructions personalised to the patient's face shape and smile.", features: ["Emax & porcelain veneers", "Direct composite facets", "Professional laser whitening", "Decorative dental gems", "Digital smile design"] },
-        { slug: "endodonti-protetike", title: "Endodontics & Prosthetics", short: "Root canal therapy and fixed or removable prosthetic solutions.", full: "We specialise in rotary endodontic treatments and high-end dental prosthetics, including porcelain crowns, fixed bridges and removable dentures that restore both function and aesthetics.", features: ["Rotary root canal therapy", "Zirconia porcelain crowns", "Fixed bridges on implants", "Removable dentures", "Full mouth reconstructions"] },
-        { slug: "implante-kirurgji", title: "Implants & Surgery", short: "Premium dental implants and specialised oral surgery.", full: "We place dental implants from the most trusted European brands, offering a long-term solution for missing teeth. Our oral surgery includes complex extractions, bone augmentation and pre-prosthetic surgery.", features: ["Premium dental implants", "Bone augmentation", "Sinus lift", "Surgical extractions", "Immediate loading"] },
-        { slug: "ortodonci-maskerina", title: "Orthodontics & Clear Aligners", short: "Teeth alignment with fixed braces or clear aligners.", full: "We offer orthodontic treatment for all ages — from classic metal and ceramic braces to modern clear aligners that discreetly correct tooth position.", features: ["Clear aligners", "Aesthetic ceramic braces", "Classic metal braces", "Pediatric orthodontics", "Post-treatment retainers"] },
-        { slug: "facial-fillers-treatment", title: "Facial Fillers & Treatment", short: "Lip fillers, rejuvenating treatments and aesthetic facial care.", full: "Our facial aesthetic treatments are performed with premium hyaluronic acid and clinically proven protocols. We specialise in natural lip harmonisation, expression-line correction and rejuvenating treatments that enhance your natural beauty — always with a refined, never exaggerated approach.", features: ["Hyaluronic acid lip fillers", "Expression line correction", "PRP bio-rejuvenation", "Facial mesotherapy", "Personal aesthetic consultation"] },
+        {
+          slug: "dentistri-estetike",
+          title: "Aesthetic Dentistry",
+          short: "Veneers, facets and aesthetic reconstructions for a harmonious smile.",
+          full: "Aesthetic dentistry combines dental science with art to create natural, harmonious smiles. We offer Emax porcelain veneers, composite facets, laser whitening and aesthetic reconstructions personalised to the patient's face shape and smile.",
+          features: ["Emax & porcelain veneers", "Direct composite facets", "Professional laser whitening", "Decorative dental gems", "Digital smile design"],
+        },
+        {
+          slug: "endodonti-protetike",
+          title: "Endodontics & Prosthetics",
+          short: "Root canal therapy and fixed or removable prosthetic solutions.",
+          full: "We specialise in rotary endodontic treatments and high-end dental prosthetics, including porcelain crowns, fixed bridges and removable dentures that restore both function and aesthetics.",
+          features: ["Rotary root canal therapy", "Zirconia porcelain crowns", "Fixed bridges on implants", "Removable dentures", "Full mouth reconstructions"],
+        },
+        {
+          slug: "implante-kirurgji",
+          title: "Implants & Surgery",
+          short: "Premium dental implants and specialised oral surgery.",
+          full: "We place dental implants from the most trusted European brands, offering a long-term solution for missing teeth. Our oral surgery includes complex extractions, bone augmentation and pre-prosthetic surgery.",
+          features: ["Premium dental implants", "Bone augmentation", "Sinus lift", "Surgical extractions", "Immediate loading"],
+        },
+        {
+          slug: "ortodonci-maskerina",
+          title: "Orthodontics & Clear Aligners",
+          short: "Teeth alignment with fixed braces or clear aligners.",
+          full: "We offer orthodontic treatment for all ages — from classic metal and ceramic braces to modern clear aligners that discreetly correct tooth position.",
+          features: ["Clear aligners", "Aesthetic ceramic braces", "Classic metal braces", "Pediatric orthodontics", "Post-treatment retainers"],
+        },
+        {
+          slug: "facial-fillers-treatment",
+          title: "Facial Fillers & Treatment",
+          short: "Lip fillers, rejuvenating treatments and aesthetic facial care.",
+          full: "Our facial aesthetic treatments are performed with premium hyaluronic acid and clinically proven protocols. We specialise in natural lip harmonisation, expression-line correction and rejuvenating treatments that enhance your natural beauty — always with a refined, never exaggerated approach.",
+          features: ["Hyaluronic acid lip fillers", "Expression line correction", "PRP bio-rejuvenation", "Facial mesotherapy", "Personal aesthetic consultation"],
+        },
       ],
     },
     gallery: {
@@ -321,7 +408,7 @@ export const translations = {
     contact: {
       eyebrow: "Contact",
       title: "Let's talk",
-      subtitle: "Send us an email to book your free consultation or to learn more about our services.",
+      subtitle: "Send us an email to book your appointment or to learn more about our services.",
       emailCta: "Send us an email",
       info: "Contact information",
       map: "Find us",

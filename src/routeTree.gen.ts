@@ -14,7 +14,6 @@ import { Route as KontaktRouteImport } from './routes/kontakt'
 import { Route as GaleriaRouteImport } from './routes/galeria'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as SherbimetIndexRouteImport } from './routes/sherbimet.index'
-import { Route as SherbimetSlugRouteImport } from './routes/sherbimet.$slug'
 
 const RrethNeshRoute = RrethNeshRouteImport.update({
   id: '/rreth-nesh',
@@ -41,18 +40,12 @@ const SherbimetIndexRoute = SherbimetIndexRouteImport.update({
   path: '/sherbimet/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const SherbimetSlugRoute = SherbimetSlugRouteImport.update({
-  id: '/sherbimet/$slug',
-  path: '/sherbimet/$slug',
-  getParentRoute: () => rootRouteImport,
-} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/galeria': typeof GaleriaRoute
   '/kontakt': typeof KontaktRoute
   '/rreth-nesh': typeof RrethNeshRoute
-  '/sherbimet/$slug': typeof SherbimetSlugRoute
   '/sherbimet/': typeof SherbimetIndexRoute
 }
 export interface FileRoutesByTo {
@@ -60,7 +53,6 @@ export interface FileRoutesByTo {
   '/galeria': typeof GaleriaRoute
   '/kontakt': typeof KontaktRoute
   '/rreth-nesh': typeof RrethNeshRoute
-  '/sherbimet/$slug': typeof SherbimetSlugRoute
   '/sherbimet': typeof SherbimetIndexRoute
 }
 export interface FileRoutesById {
@@ -69,34 +61,14 @@ export interface FileRoutesById {
   '/galeria': typeof GaleriaRoute
   '/kontakt': typeof KontaktRoute
   '/rreth-nesh': typeof RrethNeshRoute
-  '/sherbimet/$slug': typeof SherbimetSlugRoute
   '/sherbimet/': typeof SherbimetIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths:
-    | '/'
-    | '/galeria'
-    | '/kontakt'
-    | '/rreth-nesh'
-    | '/sherbimet/$slug'
-    | '/sherbimet/'
+  fullPaths: '/' | '/galeria' | '/kontakt' | '/rreth-nesh' | '/sherbimet/'
   fileRoutesByTo: FileRoutesByTo
-  to:
-    | '/'
-    | '/galeria'
-    | '/kontakt'
-    | '/rreth-nesh'
-    | '/sherbimet/$slug'
-    | '/sherbimet'
-  id:
-    | '__root__'
-    | '/'
-    | '/galeria'
-    | '/kontakt'
-    | '/rreth-nesh'
-    | '/sherbimet/$slug'
-    | '/sherbimet/'
+  to: '/' | '/galeria' | '/kontakt' | '/rreth-nesh' | '/sherbimet'
+  id: '__root__' | '/' | '/galeria' | '/kontakt' | '/rreth-nesh' | '/sherbimet/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -104,7 +76,6 @@ export interface RootRouteChildren {
   GaleriaRoute: typeof GaleriaRoute
   KontaktRoute: typeof KontaktRoute
   RrethNeshRoute: typeof RrethNeshRoute
-  SherbimetSlugRoute: typeof SherbimetSlugRoute
   SherbimetIndexRoute: typeof SherbimetIndexRoute
 }
 
@@ -145,13 +116,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SherbimetIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/sherbimet/$slug': {
-      id: '/sherbimet/$slug'
-      path: '/sherbimet/$slug'
-      fullPath: '/sherbimet/$slug'
-      preLoaderRoute: typeof SherbimetSlugRouteImport
-      parentRoute: typeof rootRouteImport
-    }
   }
 }
 
@@ -160,7 +124,6 @@ const rootRouteChildren: RootRouteChildren = {
   GaleriaRoute: GaleriaRoute,
   KontaktRoute: KontaktRoute,
   RrethNeshRoute: RrethNeshRoute,
-  SherbimetSlugRoute: SherbimetSlugRoute,
   SherbimetIndexRoute: SherbimetIndexRoute,
 }
 export const routeTree = rootRouteImport

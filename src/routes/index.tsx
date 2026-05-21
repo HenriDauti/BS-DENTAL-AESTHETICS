@@ -61,8 +61,8 @@ function HomePage() {
             {services.map((s, i) => (
               <Link
                 key={s.slug}
-                to="/sherbimet/$slug"
-                params={{ slug: s.slug }}
+                to="/sherbimet"
+                hash={s.slug}
                 className={`group flex flex-col bg-background p-8 transition-colors hover:bg-muted ${
                   i < 3 ? "lg:col-span-2" : "lg:col-span-3"
                 } ${
@@ -220,7 +220,7 @@ function HomePage() {
             <div className="eyebrow">{t.home.faqEyebrow}</div>
             <span className="gold-divider mt-4 inline-block" />
             <h2 className="mt-4 font-serif text-3xl text-primary md:text-4xl lg:text-5xl">{t.home.faqTitle}</h2>
-            <p className="mt-6 max-w-sm text-sm leading-relaxed text-muted-foreground">{t.home.heroSubtitle}</p>
+            <p className="mt-6 max-w-sm text-sm leading-relaxed text-muted-foreground">{t.home.faqSubtitle}</p>
           </div>
           <div className="divide-y divide-border border-y border-border">
             {t.home.faq.map((f, i) => {
