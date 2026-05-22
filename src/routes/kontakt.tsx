@@ -23,33 +23,39 @@ function ContactPage() {
 
   const cardHref = (kind: string) =>
     kind === "email"
-      ? `mailto:${CLINIC.email}`
+      ? "mailto:" + CLINIC.email
       : kind === "address"
       ? CLINIC.mapsUrl
       : CLINIC.instagram;
+
   const cardIcon = (kind: string) =>
     kind === "email" ? Mail : kind === "address" ? MapPin : Instagram;
 
   return (
     <>
+      {/* Hero */}
       <section className="bg-muted py-20 md:py-28">
         <div className="container-x text-center">
           <div className="eyebrow">{t.contact.eyebrow}</div>
           <span className="gold-divider mt-4 inline-block" />
-          <h1 className="mx-auto mt-4 max-w-3xl font-serif text-4xl text-primary md:text-5xl lg:text-6xl">{t.contact.title}</h1>
-          <p className="mx-auto mt-6 max-w-2xl text-base text-muted-foreground">{t.contact.subtitle}</p>
+          <h1 className="mx-auto mt-4 max-w-3xl font-serif text-4xl text-primary md:text-5xl lg:text-6xl">
+            {t.contact.title}
+          </h1>
+          <p className="mx-auto mt-6 max-w-2xl text-base text-muted-foreground">
+            {t.contact.subtitle}
+          </p>
         </div>
       </section>
 
-      {/* Cards */}
+      {/* Contact cards */}
       <section className="bg-background py-20">
         <div className="container-x">
           <div className="grid gap-px bg-border md:grid-cols-3">
             {t.contact.cards.map((c) => {
               const Icon = cardIcon(c.kind);
               return (
-                <a
-                  key={c.kind}
+                
+                <a  key={c.kind}
                   href={cardHref(c.kind)}
                   target={c.kind === "email" ? undefined : "_blank"}
                   rel="noreferrer"
@@ -58,7 +64,9 @@ function ContactPage() {
                   <span className="flex h-12 w-12 items-center justify-center rounded-full bg-accent/15 text-accent">
                     <Icon size={20} />
                   </span>
-                  <div className="mt-6 text-xs uppercase tracking-[0.18em] text-muted-foreground">{c.title}</div>
+                  <div className="mt-6 text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                    {c.title}
+                  </div>
                   <div className="mt-2 font-serif text-xl text-primary">{c.value}</div>
                   <p className="mt-2 text-sm text-muted-foreground">{c.hint}</p>
                   <span className="mt-6 inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-accent">
@@ -70,44 +78,80 @@ function ContactPage() {
           </div>
 
           <div className="mt-10 flex items-center justify-center gap-3 text-sm text-muted-foreground">
-            <Clock size={16} className="text-accent" /> {t.common.hoursValue}
+            <Clock size={16} className="shrink-0 text-accent" />
+            {t.common.hoursValue}
           </div>
         </div>
       </section>
 
       {/* Form + Map */}
-      <section className="bg-muted py-20">
-        <div className="container-x grid gap-12 lg:grid-cols-[1.1fr_1fr]">
+      <section className="bg-muted py-20 md:py-24">
+        <div className="container-x grid gap-16 lg:grid-cols-2 lg:items-start">
+
+          {/* Form */}
           <div>
             <div className="eyebrow">{t.contact.formEyebrow}</div>
             <span className="gold-divider mt-3 inline-block" />
-            <h2 className="mt-4 font-serif text-3xl text-primary md:text-4xl">{t.contact.formTitle}</h2>
-            <p className="mt-4 text-sm text-muted-foreground">{t.contact.formSubtitle}</p>
+            <h2 className="mt-4 font-serif text-3xl text-primary md:text-4xl">
+              {t.contact.formTitle}
+            </h2>
+            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+              {t.contact.formSubtitle}
+            </p>
             <div className="mt-8">
               <AppointmentForm />
             </div>
           </div>
-          <div>
-            <h2 className="font-serif text-2xl text-primary md:text-3xl">{t.contact.map}</h2>
+
+          {/* Map */}
+          <div className="flex flex-col">
+            <div className="eyebrow">{t.contact.map}</div>
             <span className="gold-divider mt-3 inline-block" />
-            <div className="mt-6 aspect-[4/5] overflow-hidden border border-border">
+            <h2 className="mt-4 font-serif text-3xl text-primary md:text-4xl">
+              {t.common.addressValue}
+            </h2>
+            <p className="mt-3 text-sm text-muted-foreground">
+              {t.common.hoursValue}
+            </p>
+            <div className="mt-6 overflow-hidden border border-border">
               <iframe
                 title="BS Dental Clinic & Aesthetics — Map"
-                src={`https://www.google.com/maps?q=${CLINIC.lat},${CLINIC.lng}&z=16&output=embed`}
+                src={"https://www.google.com/maps?q=" + CLINIC.lat + "," + CLINIC.lng + "&z=16&output=embed"}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                className="h-full w-full border-0"
+                className="h-80 w-full border-0 lg:h-96"
               />
             </div>
-            <a
-              href={CLINIC.mapsUrl}
+            
+             <a href={CLINIC.mapsUrl}
               target="_blank"
               rel="noreferrer"
-              className="mt-6 inline-flex items-center gap-2 border border-primary px-6 py-3 text-xs uppercase tracking-[0.18em] text-primary hover:bg-primary hover:text-primary-foreground"
+              className="mt-4 inline-flex items-center gap-2 self-start text-xs uppercase tracking-[0.18em] text-accent hover:text-primary transition-colors"
             >
-              {t.common.address} <ArrowRight size={14} />
+              <MapPin size={13} />
+              {t.common.address} <ArrowRight size={12} />
             </a>
           </div>
+
+        </div>
+      </section>
+
+      {/* Bottom CTA */}
+      <section className="bg-accent/10 py-20">
+        <div className="container-x text-center">
+          <span className="gold-divider inline-block" />
+          <h2 className="mt-4 font-serif text-3xl text-primary md:text-4xl">
+            {t.home.ctaTitle}
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
+            {t.home.ctaSubtitle}
+          </p>
+          
+           <a href={"mailto:" + CLINIC.email}
+            className="mt-8 inline-flex items-center gap-2 bg-primary px-7 py-3.5 text-xs uppercase tracking-[0.18em] text-primary-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
+          >
+            {t.common.bookAppointment} <ArrowRight size={14} />
+          </a>
         </div>
       </section>
     </>

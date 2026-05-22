@@ -67,17 +67,23 @@ export function Lightbox({
   );
 }
 
+function gridClass(count: number): string {
+  if (count === 1) return "grid grid-cols-1 gap-6 max-w-md mx-auto";
+  if (count === 2) return "grid grid-cols-2 gap-6 max-w-2xl mx-auto";
+  return "grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3";
+}
+
 export function GalleryGrid({ images }: { images: { src: string; alt: string }[] }) {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
     <>
-      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className={gridClass(images.length)}>
         {images.map((img, i) => (
           <button
             key={i}
             onClick={() => setOpen(i)}
-            className="group relative aspect-[4/5] overflow-hidden bg-muted"
+            className="group relative aspect-[4/5] w-full overflow-hidden bg-muted"
           >
             <img
               src={img.src}

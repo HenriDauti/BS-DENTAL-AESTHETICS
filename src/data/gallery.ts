@@ -1,9 +1,14 @@
 import lips1 from "@/assets/gallery/lips-1.jpeg";
 import lips2 from "@/assets/gallery/lips-2.jpeg";
 import lips3 from "@/assets/gallery/lips-3.jpeg";
+
+import hero from "@/assets/hero.jpg";
 import veneers1 from "@/assets/gallery/veneers-1.jpeg";
 import veneers2 from "@/assets/gallery/veneers-2.jpeg";
 import whitening1 from "@/assets/gallery/whitening-1.jpeg";
+import about from "@/assets/about.jpg";
+import doctorWorking from "@/assets/team/doctor-working.jpeg";
+import doctorInjection from "@/assets/team/doctor-injection.jpeg";
 
 export type GalleryCategory = "lips" | "veneers" | "whitening";
 
@@ -20,6 +25,13 @@ export const galleryItems: GalleryItem[] = [
   { src: lips2, category: "lips", alt: "Hyaluronic acid lip treatment result" },
   { src: veneers1, category: "veneers", alt: "Porcelain veneers detail" },
   { src: lips3, category: "lips", alt: "Natural lip harmonisation" },
+];
+
+// Mock clinic photos — swap these out once real shots are ready
+export const clinicPhotos = [
+  { src: hero, alt: "BS Dental Clinic — reception area" },
+  { src: hero, alt: "BS Dental Clinic — treatment room" },
+  { src: hero, alt: "BS Dental Clinic — aesthetic suite" },
 ];
 
 export const testimonials = [

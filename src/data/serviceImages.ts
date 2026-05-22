@@ -1,13 +1,13 @@
-import about from "@/assets/about.jpg";
-import doctorWorking from "@/assets/team/doctor-working.jpeg";
-import doctorInjection from "@/assets/team/doctor-injection.jpeg";
-import veneers1 from "@/assets/gallery/veneers-1.jpeg";
-import whitening1 from "@/assets/gallery/whitening-1.jpeg";
+import dentistri from "@/assets/Dentistri Estetike.png";
+import endodonti from "@/assets/Endodonti & Protetikë.png";
+import implante from "@/assets/Implante & Kirurgji.png";
+import ortodonci from "@/assets/Ortodonci & Maskerina Transparente.png";
+import facialFillers from "@/assets/Facial Fillers & Facial Treatment.png";
 
 export const serviceImage: Record<string, string> = {
-  "dentistri-estetike": veneers1,
-  "endodonti-protetike": doctorWorking,
-  "implante-kirurgji": about,
-  "ortodonci-maskerina": whitening1,
-  "facial-fillers-treatment": doctorInjection,
+  "dentistri-estetike": dentistri,
+  "endodonti-protetike": endodonti,
+  "implante-kirurgji": implante,
+  "ortodonci-maskerina": ortodonci,
+  "facial-fillers-treatment": facialFillers,
 };

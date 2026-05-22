@@ -35,7 +35,7 @@ export const translations = {
       servicesEyebrow: "Shërbimet Tona",
       servicesTitle: "Kujdes i plotë dental dhe estetik",
       servicesSubtitle:
-        "Nga implantet dhe ortodoncia, te trajtimet estetike të fytyrës — gjithçka në një vend, me standardet më të larta.",
+        "Nga implantet dhe ortodoncia, te trajtimet estetike të fytyrës, gjithçka në një vend, me standardet më të larta.",
       whyEyebrow: "Pse të na zgjidhni",
       whyTitle: "Përkushtim ndaj cilësisë në çdo detaj",
       pillars: [
@@ -68,13 +68,13 @@ export const translations = {
       doctorsEyebrow: "Ekipi ynë",
       doctorsTitle: "Mjekë që kujdesen për çdo detaj",
       doctorsBody:
-        "Dr. Bia Sinani dhe Dr. Miti Sinani — dy mjekë stomatologë me ekspertizë komplementare, të bashkuar nga e njëjta vizion: kujdesi i shkëlqyer për çdo pacient.",
+        "Dr. Bia Sinani dhe Dr. Miti Sinani, dy mjekë stomatologë me ekspertizë komplementare, të bashkuar nga e njëjta vizion: kujdesi i shkëlqyer për çdo pacient.",
       testimonialsEyebrow: "Çfarë thonë pacientët",
       testimonialsTitle: "Përvoja që na bën krenarë",
       faqEyebrow: "Pyetjet më të shpeshta",
       faqTitle: "Çfarë duhet të dini para vizitës",
       faqSubtitle:
-        "Kemi mbledhur përgjigjet për pyetjet që dëgjojmë më shpesh — që vizita juaj të fillojë me besim dhe qetësi.",
+        "Kemi mbledhur përgjigjet për pyetjet që dëgjojmë më shpesh, që vizita juaj të fillojë me besim dhe qetësi.",
       faq: [
         {
           q: "Si mund të rezervoj një takim?",
@@ -86,7 +86,7 @@ export const translations = {
         },
         {
           q: "Çfarë materiale përdorni?",
-          a: "Përdorim vetëm materiale të certifikuara ndërkombëtarisht — porcelan Emax, zirkonia dhe hijaluronik premium — të njëjtat standarde që gjenden në klinikat europiane.",
+          a: "Përdorim vetëm materiale të certifikuara ndërkombëtarisht, porcelan Emax, zirkonia dhe hijaluronik premium, të njëjtat standarde që gjenden në klinikat europiane.",
         },
         {
           q: "A është trajtimi i dhimbshëm?",
@@ -94,7 +94,7 @@ export const translations = {
         },
         {
           q: "Sa kohë zgjasin rezultatet?",
-          a: "Veneers dhe implantet janë zgjidhje afatgjata — me kujdesin e duhur pas trajtimit, rezultatet ruajnë cilësinë e tyre për shumë vite.",
+          a: "Veneers dhe implantet janë zgjidhje afatgjata, me kujdesin e duhur pas trajtimit, rezultatet ruajnë cilësinë e tyre për shumë vite.",
         },
       ],
       ctaTitle: "Gati për buzëqeshjen tënde të re?",
@@ -106,7 +106,7 @@ export const translations = {
       intro:
         "BS Dental Clinic & Aesthetics u themelua me një vizion të qartë: të ofrojë kujdes dentar të standardit më të lartë, të kombinuar me ekspertizë në mjekësi estetike, në një mjedis ku pacienti ndihet i kuptuar dhe i kujdesur.",
       mission:
-        "Misioni ynë është të transformojmë çdo vizitë në një përvojë të rehatshme dhe rezultative — duke përdorur teknologjinë më të fundit, materialet më cilësore dhe një qasje personale për çdo pacient.",
+        "Misioni ynë është të transformojmë çdo vizitë në një përvojë të rehatshme dhe rezultative, duke përdorur teknologjinë më të fundit, materialet më cilësore dhe një qasje personale për çdo pacient.",
       highlightsTitle: "Çfarë na bën të ndryshëm",
       highlights: [
         { title: "Kujdes i Personalizuar", body: "Çdo plan trajtimi ndërtohet sipas nevojave unike të pacientit dhe qëllimeve estetike." },
@@ -121,13 +121,13 @@ export const translations = {
       missionEyebrow: "Filozofia jonë",
       missionTitle: "Misioni Ynë",
       missionBody:
-        "Në BS Dental Clinic & Aesthetics, misioni ynë është të mbajmë të njëjtin standard me klinikat më të specializuara europiane. Na kujdeset të krijojmë buzëqeshje që janë funksionale, të harmonizuara dhe plotësisht të personalizuara — art dhe shkencë në të njëjtën kohë, gjithmonë me përkushtim ndaj çdo detaji.",
+        "Në BS Dental Clinic & Aesthetics, misioni ynë është të mbajmë të njëjtin standard me klinikat më të specializuara europiane. Na kujdeset të krijojmë buzëqeshje që janë funksionale, të harmonizuara dhe plotësisht të personalizuara, art dhe shkencë në të njëjtën kohë, gjithmonë me përkushtim ndaj çdo detaji.",
       missionPoints: [
         { title: "Standard i Lartë", body: "Rezultate të dëshmuara dhe standarde që flasin vetë." },
-        { title: "Shkencë dhe Art", body: "Harmonizim i plotë — estetikë, funksion dhe teknologji bashkëkohore." },
+        { title: "Shkencë dhe Art", body: "Harmonizim i plotë, estetikë, funksion dhe teknologji bashkëkohore." },
         { title: "Rezultate Afatgjata", body: "Trajtime minimalisht invazive që ruajnë estetikën dhe komoditetin ndaj pacientit." },
       ],
-      quote: "Bukuria e vërtetë fillon me shëndet — dhe çdo buzëqeshje e shëndetshme fillon me kujdes të vërtetë.",
+      quote: "Bukuria e vërtetë fillon me shëndet, dhe çdo buzëqeshje e shëndetshme fillon me kujdes të vërtetë.",
       valuesTitle: "Vlerat tona",
       values: [
         { title: "Cilësi", body: "Materiale dhe teknika të nivelit europian." },
@@ -167,14 +167,14 @@ export const translations = {
           slug: "ortodonci-maskerina",
           title: "Ortodonci & Maskerina Transparente",
           short: "Drejtim dhëmbësh me aparate fikse ose maskerina transparente.",
-          full: "Ofrojmë trajtim ortodontik për të gjitha moshat — nga aparatet klasike metalike dhe ato qeramike, deri te maskerinat moderne transparente që korrigjojnë diskretisht pozicionin e dhëmbëve.",
+          full: "Ofrojmë trajtim ortodontik për të gjitha moshat, nga aparatet klasike metalike dhe ato qeramike, deri te maskerinat moderne transparente që korrigjojnë diskretisht pozicionin e dhëmbëve.",
           features: ["Maskerina transparente", "Aparate qeramike estetike", "Aparate metalike klasike", "Trajtim ortodontik për fëmijë", "Mbajtëse pas trajtimit"],
         },
         {
           slug: "facial-fillers-treatment",
           title: "Facial Fillers & Facial Treatment",
           short: "Mbushës buzësh, trajtime rinovuese dhe kujdes estetik për fytyrën.",
-          full: "Trajtimet tona estetike të fytyrës kryhen me hijaluronik premium dhe protokolle të dëshmuara klinikisht. Specializohemi në harmonizimin natyral të buzëve, korrigjimin e linjave të shprehjes dhe trajtime rinovuese që theksojnë bukurinë tënde natyrale — pa ekzagjerime, gjithmonë me një qasje të rafinuar.",
+          full: "Trajtimet tona estetike të fytyrës kryhen me hijaluronik premium dhe protokolle të dëshmuara klinikisht. Specializohemi në harmonizimin natyral të buzëve, korrigjimin e linjave të shprehjes dhe trajtime rinovuese që theksojnë bukurinë tënde natyrale, pa ekzagjerime, gjithmonë me një qasje të rafinuar.",
           features: ["Mbushës buzësh me hijaluronik", "Korrigjim i linjave të shprehjes", "Bio-rinovim me PRP", "Mezoterapi facial", "Konsulta estetike personale"],
         },
       ],
@@ -254,7 +254,7 @@ export const translations = {
       servicesEyebrow: "Our Services",
       servicesTitle: "Complete dental and aesthetic care",
       servicesSubtitle:
-        "From implants and orthodontics to facial aesthetic treatments — all in one place, to the highest standards.",
+        "From implants and orthodontics to facial aesthetic treatments, all in one place, to the highest standards.",
       whyEyebrow: "Why choose us",
       whyTitle: "A commitment to quality in every detail",
       pillars: [
@@ -274,7 +274,7 @@ export const translations = {
       processEyebrow: "How we work",
       processTitle: "A simple journey to your new smile",
       processSubtitle:
-        "Every treatment begins with careful listening and continues with a personalised, transparent plan — no surprises.",
+        "Every treatment begins with careful listening and continues with a personalised, transparent plan, no surprises.",
       process: [
         { title: "Initial consultation", body: "We listen to your needs, perform a clinical exam and provide a detailed diagnosis." },
         { title: "Personal plan", body: "A transparent plan with clear costs, phases and timeline tailored to you." },
@@ -287,13 +287,13 @@ export const translations = {
       doctorsEyebrow: "Our team",
       doctorsTitle: "Doctors who care about every detail",
       doctorsBody:
-        "Dr. Bia Sinani and Dr. Miti Sinani — two dentists with complementary expertise, united by a single vision: outstanding care for every patient.",
+        "Dr. Bia Sinani and Dr. Miti Sinani, two dentists with complementary expertise, united by a single vision: outstanding care for every patient.",
       testimonialsEyebrow: "What patients say",
       testimonialsTitle: "Stories that make us proud",
       faqEyebrow: "Frequently asked questions",
       faqTitle: "What to know before your visit",
       faqSubtitle:
-        "We've answered the questions we hear most often — so you arrive informed, relaxed and ready.",
+        "We've answered the questions we hear most often, so you arrive informed, relaxed and ready.",
       faq: [
         {
           q: "How can I book an appointment?",
@@ -305,7 +305,7 @@ export const translations = {
         },
         {
           q: "What materials do you use?",
-          a: "We use only internationally certified materials — Emax porcelain, zirconia and premium hyaluronic acid — the same standards found in leading European clinics.",
+          a: "We use only internationally certified materials, Emax porcelain, zirconia and premium hyaluronic acid, the same standards found in leading European clinics.",
         },
         {
           q: "Is the treatment painful?",
@@ -313,7 +313,7 @@ export const translations = {
         },
         {
           q: "How long do results last?",
-          a: "Veneers and implants are long-term solutions — with proper aftercare, results maintain their quality for many years.",
+          a: "Veneers and implants are long-term solutions, with proper aftercare, results maintain their quality for many years.",
         },
       ],
       ctaTitle: "Ready for your new smile?",
@@ -325,7 +325,7 @@ export const translations = {
       intro:
         "BS Dental Clinic & Aesthetics was founded with a clear vision: to deliver dental care of the highest standard, combined with expertise in aesthetic medicine, in an environment where the patient feels heard and cared for.",
       mission:
-        "Our mission is to make every visit comfortable and rewarding — using the latest technology, the finest materials and a personal approach for every patient.",
+        "Our mission is to make every visit comfortable and rewarding, using the latest technology, the finest materials and a personal approach for every patient.",
       highlightsTitle: "What makes us different",
       highlights: [
         { title: "Personalised Care", body: "Every plan is built around the patient's unique needs and aesthetic goals." },
@@ -340,13 +340,13 @@ export const translations = {
       missionEyebrow: "Our philosophy",
       missionTitle: "Our Mission",
       missionBody:
-        "At BS Dental Clinic & Aesthetics, our mission is to hold ourselves to the same standard as Europe's leading specialist clinics. We are committed to creating smiles that are functional, harmonious and personal — art and science in equal measure, always with an eye for every detail.",
+        "At BS Dental Clinic & Aesthetics, our mission is to hold ourselves to the same standard as Europe's leading specialist clinics. We are committed to creating smiles that are functional, harmonious and personal, art and science in equal measure, always with an eye for every detail.",
       missionPoints: [
         { title: "High Standard", body: "Proven results and standards that speak for themselves." },
-        { title: "Science & Art", body: "Full harmonisation — aesthetics, function and modern technology." },
+        { title: "Science & Art", body: "Full harmonisation, aesthetics, function and modern technology." },
         { title: "Long-lasting Results", body: "Minimally invasive treatments that preserve aesthetics and patient comfort." },
       ],
-      quote: "True beauty begins with health — and every healthy smile begins with genuine care.",
+      quote: "True beauty begins with health, and every healthy smile begins with genuine care.",
       valuesTitle: "Our values",
       values: [
         { title: "Quality", body: "European-grade materials and techniques." },
@@ -385,14 +385,14 @@ export const translations = {
           slug: "ortodonci-maskerina",
           title: "Orthodontics & Clear Aligners",
           short: "Teeth alignment with fixed braces or clear aligners.",
-          full: "We offer orthodontic treatment for all ages — from classic metal and ceramic braces to modern clear aligners that discreetly correct tooth position.",
+          full: "We offer orthodontic treatment for all ages, from classic metal and ceramic braces to modern clear aligners that discreetly correct tooth position.",
           features: ["Clear aligners", "Aesthetic ceramic braces", "Classic metal braces", "Pediatric orthodontics", "Post-treatment retainers"],
         },
         {
           slug: "facial-fillers-treatment",
           title: "Facial Fillers & Treatment",
           short: "Lip fillers, rejuvenating treatments and aesthetic facial care.",
-          full: "Our facial aesthetic treatments are performed with premium hyaluronic acid and clinically proven protocols. We specialise in natural lip harmonisation, expression-line correction and rejuvenating treatments that enhance your natural beauty — always with a refined, never exaggerated approach.",
+          full: "Our facial aesthetic treatments are performed with premium hyaluronic acid and clinically proven protocols. We specialise in natural lip harmonisation, expression-line correction and rejuvenating treatments that enhance your natural beauty, always with a refined, never exaggerated approach.",
           features: ["Hyaluronic acid lip fillers", "Expression line correction", "PRP bio-rejuvenation", "Facial mesotherapy", "Personal aesthetic consultation"],
         },
       ],
