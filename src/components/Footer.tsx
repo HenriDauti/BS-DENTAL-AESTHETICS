@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Instagram, Mail, MapPin, Clock } from "lucide-react";
 import { useLang } from "@/i18n/LanguageContext";
 import { CLINIC } from "@/i18n/translations";
-import logo from "@/assets/logoraw.png";
+import logo from "@/assets/logo.png";
 
 const COORDS = { lat: 41.324177, lng: 19.780306 };
 const MAP_EMBED = `https://maps.google.com/maps?q=${COORDS.lat},${COORDS.lng}&z=17&output=embed`;
@@ -10,12 +10,12 @@ const MAP_EMBED = `https://maps.google.com/maps?q=${COORDS.lat},${COORDS.lng}&z=
 export function Footer() {
   const { t, lang } = useLang();
 
-  const serviceLinks = [
-    { to: "/sherbimet/dentistri-estetike", label: lang === "sq" ? "Dentistri Estetike" : "Aesthetic Dentistry" },
-    { to: "/sherbimet/endodonti-protetike", label: lang === "sq" ? "Endodonti & Protetikë" : "Endodontics & Prosthetics" },
-    { to: "/sherbimet/implante-kirurgji", label: lang === "sq" ? "Implante & Kirurgji" : "Implants & Surgery" },
-    { to: "/sherbimet/ortodonci-maskerina", label: lang === "sq" ? "Ortodonci & Maskerina" : "Orthodontics & Aligners" },
-    { to: "/sherbimet/facial-fillers-treatment", label: lang === "sq" ? "Trajtime Estetike" : "Aesthetic Treatments" },
+const serviceLinks = [
+    { hash: "dentistri-estetike", label: lang === "sq" ? "Dentistri Estetike" : "Aesthetic Dentistry" },
+    { hash: "endodonti-protetike", label: lang === "sq" ? "Endodonti & Protetikë" : "Endodontics & Prosthetics" },
+    { hash: "implante-kirurgji", label: lang === "sq" ? "Implante & Kirurgji" : "Implants & Surgery" },
+    { hash: "ortodonci-maskerina", label: lang === "sq" ? "Ortodonci & Maskerina" : "Orthodontics & Aligners" },
+    { hash: "facial-fillers-treatment", label: lang === "sq" ? "Trajtime Estetike" : "Aesthetic Treatments" },
   ];
 
   const tagline =
@@ -37,7 +37,7 @@ export function Footer() {
         {/* Brand */}
         <div className="sm:col-span-2 lg:col-span-1">
           <div className="flex items-center gap-3">
-            <img src={logo} alt="" className="h-12 w-12 object-contain brightness-0 invert" />
+            <img src={logo} alt="" className="h-14 w-14 object-contain brightness-0 invert" />
             <div className="leading-tight">
               <div className="font-serif text-xl">BS Dental Clinic</div>
               <div className="text-[10px] tracking-[0.25em] text-accent uppercase">& Aesthetics</div>
@@ -46,14 +46,14 @@ export function Footer() {
           <p className="mt-6 text-sm text-primary-foreground/70 leading-relaxed">{tagline}</p>
         </div>
 
-        {/* Services */}
+  {/* Services */}
         <div>
           <h4 className="font-serif text-base text-accent">{t.nav.services}</h4>
           <span className="gold-divider mt-2 mb-4" />
           <ul className="space-y-2 text-sm text-primary-foreground/80">
             {serviceLinks.map((s) => (
-              <li key={s.to}>
-                <Link to={s.to} className="hover:text-accent transition-colors">{s.label}</Link>
+              <li key={s.hash}>
+                <Link to="/services" hash={s.hash} className="hover:text-accent transition-colors">{s.label}</Link>
               </li>
             ))}
           </ul>
@@ -65,10 +65,10 @@ export function Footer() {
           <span className="gold-divider mt-2 mb-4" />
           <ul className="space-y-2 text-sm text-primary-foreground/80">
             <li><Link to="/" className="hover:text-accent transition-colors">{t.nav.home}</Link></li>
-            <li><Link to="/rreth-nesh" className="hover:text-accent transition-colors">{t.nav.about}</Link></li>
-            <li><Link to="/sherbimet" className="hover:text-accent transition-colors">{t.nav.services}</Link></li>
-            <li><Link to="/galeria" className="hover:text-accent transition-colors">{t.nav.gallery}</Link></li>
-            <li><Link to="/kontakt" className="hover:text-accent transition-colors">{t.nav.contact}</Link></li>
+            <li><Link to="/about" className="hover:text-accent transition-colors">{t.nav.about}</Link></li>
+            <li><Link to="/services" className="hover:text-accent transition-colors">{t.nav.services}</Link></li>
+            <li><Link to="/gallery" className="hover:text-accent transition-colors">{t.nav.gallery}</Link></li>
+            <li><Link to="/contact" className="hover:text-accent transition-colors">{t.nav.contact}</Link></li>
           </ul>
         </div>
 

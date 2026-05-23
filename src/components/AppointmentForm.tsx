@@ -62,9 +62,9 @@ export function AppointmentForm() {
           ))}
         </select>
       </div>
-      <textarea
+   <textarea
         rows={5}
-        className={inputCls}
+        className={inputCls + " resize-none h-42"}
         placeholder={t.contact.form.message}
         value={form.message}
         onChange={(e) => setForm({ ...form, message: e.target.value })}

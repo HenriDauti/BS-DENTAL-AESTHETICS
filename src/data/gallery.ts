@@ -38,33 +38,29 @@ export const testimonials = [
   {
     name: "Eriona K.",
     service: "Veneers Emax",
-    quote:
-      "Çdo detaj u trajtua me kujdes të jashtëzakonshëm. Buzëqeshja ime ka ndryshuar plotësisht — duket krejtësisht natyrale.",
-    quoteEn:
-      "Every detail was handled with extraordinary care. My smile has completely changed — and it looks entirely natural.",
+    serviceEn: "Emax Veneers",
+    quote: "Çdo detaj u trajtua me kujdes të jashtëzakonshëm. Buzëqeshja ime ka ndryshuar plotësisht — duket krejtësisht natyrale.",
+    quoteEn: "Every detail was handled with extraordinary care. My smile has completely changed — and it looks entirely natural.",
   },
   {
     name: "Arben M.",
     service: "Implante dentare",
-    quote:
-      "Procesi ishte i qetë dhe pa dhimbje. Dr. Miti shpjegoi gjithçka hap pas hapi dhe rezultati është perfekt.",
-    quoteEn:
-      "The process was calm and pain-free. Dr. Miti explained every step and the result is perfect.",
+    serviceEn: "Dental Implants",
+    quote: "Procesi ishte i qetë dhe pa dhimbje. Dr. Miti shpjegoi gjithçka hap pas hapi dhe rezultati është perfekt.",
+    quoteEn: "The process was calm and pain-free. Dr. Miti explained every step and the result is perfect.",
   },
   {
     name: "Klea P.",
     service: "Mbushës buzësh",
-    quote:
-      "Më në fund gjeta një klinikë që kupton se çfarë do të thotë 'natyral'. Dr. Bia ka një sy artistik të rrallë.",
-    quoteEn:
-      "I finally found a clinic that understands what 'natural' means. Dr. Bia has a rare artistic eye.",
+    serviceEn: "Lip Fillers",
+    quote: "Më në fund gjeta një klinikë që kupton se çfarë do të thotë 'natyral'. Dr. Bia ka një sy artistik të rrallë.",
+    quoteEn: "I finally found a clinic that understands what 'natural' means. Dr. Bia has a rare artistic eye.",
   },
   {
     name: "Sara T.",
     service: "Zbardhim laser",
-    quote:
-      "Ambienti është i qetë, stafi shumë profesional dhe rezultati i menjëhershëm. Do t'i rekomandoja pa hezitim.",
-    quoteEn:
-      "The space is calming, the staff highly professional and the result is immediate. I would recommend without hesitation.",
+    serviceEn: "Laser Whitening",
+    quote: "Ambienti është i qetë, stafi shumë profesional dhe rezultati i menjëhershëm. Do t'i rekomandoja pa hezitim.",
+    quoteEn: "The space is calming, the staff highly professional and the result is immediate. I would recommend without hesitation.",
   },
 ];

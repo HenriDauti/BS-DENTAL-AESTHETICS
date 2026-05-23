@@ -4,16 +4,15 @@ import { useLang } from "@/i18n/LanguageContext";
 import { CLINIC, translations } from "@/i18n/translations";
 import { SectionHeader } from "@/components/SectionHeader";
 
-export const Route = createFileRoute("/rreth-nesh")({
+export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "Rreth Nesh — BS Dental Clinic & Aesthetics" },
       { name: "description", content: "Njihuni me BS Dental Clinic & Aesthetics — klinikë moderne dentare dhe estetike në Kashar, Tiranë." },
       { property: "og:title", content: "Rreth Nesh — BS Dental Clinic & Aesthetics" },
       { property: "og:description", content: "Klinikë dentare dhe estetike me përkushtim ndaj cilësisë dhe estetikës natyrale." },
-      { property: "og:url", content: "/rreth-nesh" },
+      { property: "og:url", content: "/about" },
     ],
-    links: [{ rel: "canonical", href: "/rreth-nesh" }],
+    links: [{ rel: "canonical", href: "/about" }],
   }),
   component: AboutPage,
 });
@@ -87,7 +86,7 @@ function AboutPage() {
               {t.about.servicesBody}
             </p>
             <Link
-              to="/sherbimet"
+              to="/services"
               className="mt-8 inline-flex items-center gap-2 border border-primary px-6 py-3 text-xs uppercase tracking-[0.18em] text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
             >
               {t.common.viewAll} <ArrowRight size={14} />
@@ -99,7 +98,7 @@ function AboutPage() {
             {services.map((s) => (
               <Link
                 key={s.slug}
-                to="/sherbimet"
+                to="/services"
                 hash={s.slug}
                 className="group flex items-center justify-between gap-6 py-6 transition-colors"
               >
@@ -180,7 +179,7 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* ── CTA ──────────────────────────────────────────────────────── */}
+     {/* ── CTA ──────────────────────────────────────────────────────── */}
       <section className="bg-accent/10 py-24">
         <div className="container-x text-center">
           <span className="gold-divider inline-block" />
@@ -191,17 +190,11 @@ function AboutPage() {
             {t.home.ctaSubtitle}
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <a
-              href={`mailto:${CLINIC.email}`}
+            <Link
+              to="/contact"
               className="inline-flex items-center gap-2 bg-primary px-7 py-3.5 text-xs uppercase tracking-[0.18em] text-primary-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
             >
               {t.common.bookAppointment} <ArrowRight size={14} />
-            </a>
-            <Link
-              to="/kontakt"
-              className="inline-flex items-center gap-2 border border-primary px-7 py-3.5 text-xs uppercase tracking-[0.18em] text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
-            >
-              {t.nav.contact}
             </Link>
           </div>
         </div>

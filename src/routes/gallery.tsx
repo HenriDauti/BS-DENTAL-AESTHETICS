@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { useLang } from "@/i18n/LanguageContext";
@@ -9,10 +9,9 @@ import about from "@/assets/about.jpg";
 import doctorWorking from "@/assets/team/doctor-working.jpeg";
 import doctorInjection from "@/assets/team/doctor-injection.jpeg";
 
-export const Route = createFileRoute("/galeria")({
+export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
-      { title: "Galeria BS Dental Clinic & Aesthetics" },
       {
         name: "description",
         content:
@@ -20,9 +19,9 @@ export const Route = createFileRoute("/galeria")({
       },
       { property: "og:title", content: "Galeria BS Dental Clinic & Aesthetics" },
       { property: "og:description", content: "Rezultate reale nga klinika jonë në Kashar, Tiranë." },
-      { property: "og:url", content: "/galeria" },
+      { property: "og:url", content: "/gallery" },
     ],
-    links: [{ rel: "canonical", href: "/galeria" }],
+    links: [{ rel: "canonical", href: "/gallery" }],
   }),
   component: GalleryPage,
 });
@@ -34,6 +33,7 @@ const clinicPhotos = [
   { src: doctorWorking, alt: "BS Dental Clinic treatment room" },
   { src: doctorInjection, alt: "BS Dental Clinic aesthetic suite" },
 ];
+const showClinicImages = false;
 
 function GalleryPage() {
   const { t, lang } = useLang();
@@ -93,7 +93,7 @@ function GalleryPage() {
           <GalleryGrid images={filtered} />
         </div>
       </section>
-
+{showClinicImages && (
       <section className="bg-muted py-20">
         <div className="container-x">
           <div className="mb-10 text-center">
@@ -120,8 +120,8 @@ function GalleryPage() {
           </div>
         </div>
       </section>
-
-      <section className="bg-accent/10 py-20">
+)}
+<section className="bg-accent/10 py-20">
         <div className="container-x text-center">
           <span className="gold-divider inline-block" />
           <h2 className="mt-4 font-serif text-3xl text-primary md:text-4xl">
@@ -130,13 +130,13 @@ function GalleryPage() {
           <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
             {t.home.ctaSubtitle}
           </p>
-          
-           <a href={"mailto:" + CLINIC.email}
+          <Link
+            to="/contact"
             className="mt-8 inline-flex items-center gap-2 bg-primary px-7 py-3.5 text-xs uppercase tracking-[0.18em] text-primary-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
           >
             {t.home.heroCta}
             <ArrowRight size={14} />
-          </a>
+          </Link>
         </div>
       </section>
     </>

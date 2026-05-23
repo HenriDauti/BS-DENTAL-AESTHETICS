@@ -238,7 +238,7 @@ export const translations = {
       hours: "Hours",
       hoursValue: "Monday – Sunday: 09:00–20:00",
       address: "Address",
-      addressValue: "Rruga Joklin Persi, Kashar, Tirana",
+      addressValue: "Street Joklin Persi, Kashar, Tirana",
       email: "Email",
       followUs: "Follow us",
       comingSoon: "Coming soon",

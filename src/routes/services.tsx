@@ -1,19 +1,17 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, Check } from "lucide-react";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { Check, ArrowRight } from "lucide-react";
 import { useLang } from "@/i18n/LanguageContext";
-import { CLINIC } from "@/i18n/translations";
 import { serviceImage } from "@/data/serviceImages";
 
-export const Route = createFileRoute("/sherbimet/")({
+export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Shërbimet — BS Dental Clinic & Aesthetics" },
       { name: "description", content: "Dentistri estetike, endodonti, implante, ortodonci dhe trajtime estetike të fytyrës në një klinikë të vetme në Tiranë." },
       { property: "og:title", content: "Shërbimet — BS Dental Clinic & Aesthetics" },
       { property: "og:description", content: "Gama e plotë e shërbimeve dentare dhe estetike." },
-      { property: "og:url", content: "/sherbimet" },
+      { property: "og:url", content: "/services" },
     ],
-    links: [{ rel: "canonical", href: "/sherbimet" }],
+    links: [{ rel: "canonical", href: "/services" }],
   }),
   component: ServicesPage,
 });
@@ -37,7 +35,7 @@ function ServicesPage() {
       </section>
 
       {/* Service entries */}
-      <section className="bg-background py-20 md:py-24">
+      <section className="bg-background pb-20 md:pb-24">
         <div className="container-x space-y-0">
           {t.services.items.map((s, i) => {
             const reverse = i % 2 === 1;
@@ -46,11 +44,11 @@ function ServicesPage() {
               <article
                 key={s.slug}
                 id={s.slug}
-                className={`grid gap-10 lg:grid-cols-2 py-20 md:py-24 ${
-                  !isLast ? "border-b border-border" : ""
-                }`}
+                className={`grid gap-10 lg:grid-cols-2 ${
+                  i === 0 ? "pt-15 pb-20 md:pb-24" : "py-20 md:py-24"
+                } ${!isLast ? "border-b border-border" : ""}`}
               >
-                {/* Image — shown first on mobile, conditionally reordered on desktop */}
+                {/* Image */}
                 <div
                   className={`min-h-[280px] overflow-hidden bg-muted ${
                     reverse ? "lg:order-2" : "lg:order-1"
@@ -84,15 +82,6 @@ function ServicesPage() {
                       </li>
                     ))}
                   </ul>
-
-                  <div className="mt-8">
-                    <a
-                      href={`mailto:${CLINIC.email}?subject=${encodeURIComponent(s.title)}`}
-                      className="inline-flex items-center gap-2 bg-primary px-6 py-3 text-xs uppercase tracking-[0.18em] text-primary-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
-                    >
-                      {t.common.bookConsultation} <ArrowRight size={14} />
-                    </a>
-                  </div>
                 </div>
               </article>
             );
@@ -106,12 +95,12 @@ function ServicesPage() {
           <span className="gold-divider inline-block" />
           <h2 className="mt-4 font-serif text-3xl text-primary md:text-4xl">{t.contact.title}</h2>
           <p className="mx-auto mt-4 max-w-xl text-muted-foreground">{t.contact.subtitle}</p>
-          <a
-            href={`mailto:${CLINIC.email}`}
+          <Link
+            to="/contact"
             className="mt-8 inline-flex items-center gap-2 bg-primary px-7 py-3.5 text-xs uppercase tracking-[0.18em] text-primary-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
           >
             {t.common.bookAppointment} <ArrowRight size={14} />
-          </a>
+          </Link>
         </div>
       </section>
     </>

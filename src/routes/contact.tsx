@@ -4,16 +4,15 @@ import { useLang } from "@/i18n/LanguageContext";
 import { CLINIC } from "@/i18n/translations";
 import { AppointmentForm } from "@/components/AppointmentForm";
 
-export const Route = createFileRoute("/kontakt")({
+export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Kontakt — BS Dental Clinic & Aesthetics" },
       { name: "description", content: "Na kontaktoni në bs.dental.aesthetics@gmail.com ose vizitoni klinikën tonë në Rrugën Joklin Persi, Kashar, Tiranë." },
       { property: "og:title", content: "Kontakt — BS Dental Clinic & Aesthetics" },
       { property: "og:description", content: "Rezervoni konsultën tuaj në klinikën BS." },
-      { property: "og:url", content: "/kontakt" },
+      { property: "og:url", content: "/contact" },
     ],
-    links: [{ rel: "canonical", href: "/kontakt" }],
+    links: [{ rel: "canonical", href: "/contact" }],
   }),
   component: ContactPage,
 });
@@ -55,7 +54,7 @@ function ContactPage() {
               const Icon = cardIcon(c.kind);
               return (
                 
-                <a  key={c.kind}
+                 <a key={c.kind}
                   href={cardHref(c.kind)}
                   target={c.kind === "email" ? undefined : "_blank"}
                   rel="noreferrer"
@@ -133,25 +132,6 @@ function ContactPage() {
             </a>
           </div>
 
-        </div>
-      </section>
-
-      {/* Bottom CTA */}
-      <section className="bg-accent/10 py-20">
-        <div className="container-x text-center">
-          <span className="gold-divider inline-block" />
-          <h2 className="mt-4 font-serif text-3xl text-primary md:text-4xl">
-            {t.home.ctaTitle}
-          </h2>
-          <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
-            {t.home.ctaSubtitle}
-          </p>
-          
-           <a href={"mailto:" + CLINIC.email}
-            className="mt-8 inline-flex items-center gap-2 bg-primary px-7 py-3.5 text-xs uppercase tracking-[0.18em] text-primary-foreground transition-colors hover:bg-accent hover:text-accent-foreground"
-          >
-            {t.common.bookAppointment} <ArrowRight size={14} />
-          </a>
         </div>
       </section>
     </>

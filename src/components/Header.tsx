@@ -3,15 +3,44 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useLang } from "@/i18n/LanguageContext";
 import { CLINIC } from "@/i18n/translations";
-import logo from "@/assets/logoraw.png";
+import logo from "@/assets/logo.png";
 
 const navLinks = [
   { to: "/", key: "home" as const },
-  { to: "/rreth-nesh", key: "about" as const },
-  { to: "/sherbimet", key: "services" as const },
-  { to: "/galeria", key: "gallery" as const },
-  { to: "/kontakt", key: "contact" as const },
+  { to: "/about", key: "about" as const },
+  { to: "/services", key: "services" as const },
+  { to: "/gallery", key: "gallery" as const },
+  { to: "/contact", key: "contact" as const },
 ];
+
+function LangToggle({ lang, setLang }: { lang: string; setLang: (l: "sq" | "en") => void }) {
+  return (
+    <div className="flex items-center rounded-full border border-border overflow-hidden text-[11px] font-medium uppercase tracking-[0.15em]">
+      <button
+        type="button"
+        onClick={() => setLang("sq")}
+        className={`px-3 py-1.5 transition-colors ${
+          lang === "sq"
+            ? "bg-primary text-primary-foreground"
+            : "text-primary/60 hover:text-primary"
+        }`}
+      >
+        SQ
+      </button>
+      <button
+        type="button"
+        onClick={() => setLang("en")}
+        className={`px-3 py-1.5 transition-colors ${
+          lang === "en"
+            ? "bg-primary text-primary-foreground"
+            : "text-primary/60 hover:text-primary"
+        }`}
+      >
+        EN
+      </button>
+    </div>
+  );
+}
 
 export function Header() {
   const { lang, setLang, t } = useLang();
@@ -21,7 +50,7 @@ export function Header() {
     <header className="sticky top-0 z-40 border-b border-border bg-background/85 backdrop-blur">
       <div className="container-x flex h-20 items-center justify-between">
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <img src={logo} alt="BS Dental Clinic & Aesthetics" className="h-12 w-12 object-contain" />
+          <img src={logo} alt="BS Dental Clinic & Aesthetics" className="h-14 w-14 object-contain" />
           <div className="hidden flex-col leading-tight sm:flex">
             <span className="font-serif text-lg text-primary">BS Dental Clinic</span>
             <span className="text-[10px] tracking-[0.25em] text-accent uppercase">& Aesthetics</span>
@@ -34,8 +63,9 @@ export function Header() {
               key={l.to}
               to={l.to}
               activeOptions={{ exact: l.to === "/" }}
-              activeProps={{ className: "text-accent" }}
-              className="text-sm font-medium text-primary/80 transition-colors hover:text-accent"
+              activeProps={{ className: "text-accent font-medium" }}
+              inactiveProps={{ className: "text-primary/80" }}
+              className="text-sm font-medium transition-colors hover:text-accent"
             >
               {t.nav[l.key]}
             </Link>
@@ -43,25 +73,11 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <div className="hidden items-center gap-1 text-xs font-medium text-primary/60 md:flex">
-            <button
-              type="button"
-              onClick={() => setLang("sq")}
-              className={lang === "sq" ? "text-accent" : "hover:text-primary"}
-            >
-              SQ
-            </button>
-            <span className="text-border">/</span>
-            <button
-              type="button"
-              onClick={() => setLang("en")}
-              className={lang === "en" ? "text-accent" : "hover:text-primary"}
-            >
-              EN
-            </button>
+          <div className="hidden md:flex">
+            <LangToggle lang={lang} setLang={setLang} />
           </div>
-          <a
-            href={`mailto:${CLINIC.email}`}
+          
+          <a  href={`mailto:${CLINIC.email}`}
             className="hidden bg-primary px-5 py-2.5 text-xs font-medium uppercase tracking-[0.18em] text-primary-foreground transition-colors hover:bg-accent hover:text-accent-foreground md:inline-flex"
           >
             {t.nav.book}
@@ -85,19 +101,18 @@ export function Header() {
                 key={l.to}
                 to={l.to}
                 onClick={() => setOpen(false)}
-                className="border-b border-border/50 py-3 text-sm font-medium text-primary"
+                activeOptions={{ exact: l.to === "/" }}
+                activeProps={{ className: "text-accent" }}
+                inactiveProps={{ className: "text-primary" }}
+                className="border-b border-border/50 py-3 text-sm font-medium"
               >
                 {t.nav[l.key]}
               </Link>
             ))}
             <div className="mt-4 flex items-center justify-between">
-              <div className="flex items-center gap-2 text-sm">
-                <button onClick={() => setLang("sq")} className={lang === "sq" ? "text-accent" : ""}>SQ</button>
-                <span>/</span>
-                <button onClick={() => setLang("en")} className={lang === "en" ? "text-accent" : ""}>EN</button>
-              </div>
-              <a
-                href={`mailto:${CLINIC.email}`}
+              <LangToggle lang={lang} setLang={setLang} />
+              
+               <a href={`mailto:${CLINIC.email}`}
                 className="bg-primary px-5 py-2.5 text-xs uppercase tracking-[0.18em] text-primary-foreground"
               >
                 {t.nav.book}

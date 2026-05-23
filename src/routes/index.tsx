@@ -12,7 +12,6 @@ import doctorPortrait from "@/assets/team/doctor-portrait.jpeg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "BS Dental Clinic & Aesthetics — Stomatologji dhe Estetikë në Tiranë" },
       { name: "description", content: "Klinikë moderne dentare dhe estetike në Kashar. Veneers, implante, ortodonci dhe mbushës buzësh me Dr. Bia & Dr. Miti Sinani." },
       { property: "og:title", content: "BS Dental Clinic & Aesthetics" },
       { property: "og:description", content: "Buzëqeshje që frymëzojnë besim. Dentistri estetike & trajtime estetike në Tiranë." },
@@ -45,7 +44,7 @@ function HomePage() {
               <a href={`mailto:${CLINIC.email}`} className="inline-flex items-center gap-2 bg-accent px-6 py-3 text-xs uppercase tracking-[0.18em] text-accent-foreground transition-colors hover:bg-primary-foreground hover:text-primary">
                 {t.home.heroCta} <ArrowRight size={14} />
               </a>
-              <Link to="/sherbimet" className="inline-flex items-center gap-2 border border-primary-foreground/30 px-6 py-3 text-xs uppercase tracking-[0.18em] text-primary-foreground transition-colors hover:border-accent hover:text-accent">
+              <Link to="/services" className="inline-flex items-center gap-2 border border-primary-foreground/30 px-6 py-3 text-xs uppercase tracking-[0.18em] text-primary-foreground transition-colors hover:border-accent hover:text-accent">
                 {t.common.exploreServices}
               </Link>
             </div>
@@ -61,7 +60,7 @@ function HomePage() {
             {services.map((s, i) => (
               <Link
                 key={s.slug}
-                to="/sherbimet"
+                to="/services"
                 hash={s.slug}
                 className={`group flex flex-col bg-background p-8 transition-colors hover:bg-muted ${
                   i < 3 ? "lg:col-span-2" : "lg:col-span-3"
@@ -79,7 +78,7 @@ function HomePage() {
             ))}
           </div>
           <div className="mt-12 text-center">
-            <Link to="/sherbimet" className="inline-flex items-center gap-2 border border-primary px-6 py-3 text-xs uppercase tracking-[0.18em] text-primary transition-colors hover:bg-primary hover:text-primary-foreground">
+            <Link to="/services" className="inline-flex items-center gap-2 border border-primary px-6 py-3 text-xs uppercase tracking-[0.18em] text-primary transition-colors hover:bg-primary hover:text-primary-foreground">
               {t.common.viewAll} <ArrowRight size={14} />
             </Link>
           </div>
@@ -164,7 +163,7 @@ function HomePage() {
             ))}
           </div>
           <div className="mt-10 text-center">
-            <Link to="/galeria" className="inline-flex items-center gap-2 border border-primary px-6 py-3 text-xs uppercase tracking-[0.18em] text-primary transition-colors hover:bg-primary hover:text-primary-foreground">
+            <Link to="/gallery" className="inline-flex items-center gap-2 border border-primary px-6 py-3 text-xs uppercase tracking-[0.18em] text-primary transition-colors hover:bg-primary hover:text-primary-foreground">
               {t.common.viewAll} <ArrowRight size={14} />
             </Link>
           </div>
@@ -179,7 +178,7 @@ function HomePage() {
             <span className="gold-divider mt-4" />
             <h2 className="mt-4 font-serif text-3xl md:text-4xl lg:text-5xl">{t.home.doctorsTitle}</h2>
             <p className="mt-6 max-w-md text-sm leading-relaxed text-primary-foreground/75">{t.home.doctorsBody}</p>
-            <Link to="/rreth-nesh" className="mt-8 inline-flex items-center gap-2 border border-primary-foreground/30 px-6 py-3 text-xs uppercase tracking-[0.18em] transition-colors hover:border-accent hover:text-accent">
+            <Link to="/about" className="mt-8 inline-flex items-center gap-2 border border-primary-foreground/30 px-6 py-3 text-xs uppercase tracking-[0.18em] transition-colors hover:border-accent hover:text-accent">
               {t.nav.about} <ArrowRight size={14} />
             </Link>
           </div>
@@ -204,7 +203,9 @@ function HomePage() {
                   <span className="h-px w-8 bg-accent" />
                   <div>
                     <div className="text-sm font-medium text-primary">{tm.name}</div>
-                    <div className="text-xs uppercase tracking-[0.18em] text-muted-foreground">{tm.service}</div>
+<div className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
+  {lang === "sq" ? tm.service : tm.serviceEn}
+</div>
                   </div>
                 </figcaption>
               </figure>
@@ -250,11 +251,8 @@ function HomePage() {
           <h2 className="mt-4 font-serif text-3xl text-primary md:text-4xl lg:text-5xl">{t.home.ctaTitle}</h2>
           <p className="mx-auto mt-5 max-w-xl text-base text-muted-foreground">{t.home.ctaSubtitle}</p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <a href={`mailto:${CLINIC.email}`} className="inline-flex items-center gap-2 bg-primary px-7 py-3.5 text-xs uppercase tracking-[0.18em] text-primary-foreground transition-colors hover:bg-accent hover:text-accent-foreground">
+            <Link to="/contact" className="inline-flex items-center gap-2 bg-primary px-7 py-3.5 text-xs uppercase tracking-[0.18em] text-primary-foreground transition-colors hover:bg-accent hover:text-accent-foreground">
               {t.common.bookAppointment} <ArrowRight size={14} />
-            </a>
-            <Link to="/kontakt" className="inline-flex items-center gap-2 border border-primary px-7 py-3.5 text-xs uppercase tracking-[0.18em] text-primary transition-colors hover:bg-primary hover:text-primary-foreground">
-              {t.nav.contact}
             </Link>
           </div>
         </div>
