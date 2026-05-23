@@ -14,6 +14,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ContactFab } from "@/components/ContactFab";
 import { CLINIC } from "@/i18n/translations";
+import logoUrl from "@/assets/logo.png"; 
 
 function NotFoundComponent() {
   const router = useRouter();
@@ -48,6 +49,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap",
       },
+        { rel: "icon", href: logoUrl, type: "image/png" },
+
     ],
     scripts: [
       {

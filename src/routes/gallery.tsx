@@ -74,7 +74,7 @@ function GalleryPage() {
       <section className="bg-background py-20">
         <div className="container-x">
           {/* Single scrollable row on mobile, wraps centered on md+ */}
-          <div className="mb-12 flex flex-nowrap gap-2 overflow-x-auto pb-1 md:flex-wrap md:justify-center md:overflow-visible">
+          <div className="mb-12 flex flex-wrap justify-center gap-2">
             {filters.map((f) => {
               const active = filter === f.key;
               const base = "flex-none px-5 py-2.5 text-xs uppercase tracking-[0.18em] transition-colors";
