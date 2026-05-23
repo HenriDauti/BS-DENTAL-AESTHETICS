@@ -65,7 +65,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
             addressCountry: "AL",
           },
           geo: { "@type": "GeoCoordinates", latitude: CLINIC.lat, longitude: CLINIC.lng },
-          openingHours: ["Mo-Sa 09:00-14:00", "Mo-Sa 16:00-20:00"],
+          openingHours: ["Mo-Su 09:00-14:00", "Mo-Su 16:00-20:00"],
           sameAs: [CLINIC.instagram],
         }),
       },

@@ -25,8 +25,8 @@ export function Footer() {
 
   const hours =
     lang === "sq"
-      ? "E Hënë – E Diel: 09:00 – 20:00"
-      : "Monday – Sunday: 09:00 – 20:00";
+      ? "E Hënë – E Diel: 09:00–14:00 & 16:00–20:00"
+      : "Monday – Sunday: 09:00–14:00 & 16:00–20:00";
 
   return (
     <footer className="mt-24 border-t border-border bg-primary text-primary-foreground">
