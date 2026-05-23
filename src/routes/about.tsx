@@ -53,16 +53,17 @@ function AboutPage() {
       {/* ── Highlights ───────────────────────────────────────────────── */}
       <section className="bg-background py-24">
         <div className="container-x">
-          <SectionHeader eyebrow={t.about.eyebrow} title={t.about.highlightsTitle} />
-          <div className="mt-16 grid gap-px bg-border md:grid-cols-3">
+          <SectionHeader eyebrow={t.home.whyEyebrow} title={t.about.highlightsTitle} />
+          {/* 3 cols on all sizes — always one row */}
+          <div className="mt-16 grid grid-cols-3 gap-px bg-border">
             {t.about.highlights.map((h, i) => {
               const Icon = HIGHLIGHT_ICONS[i] ?? Heart;
               return (
-                <div key={h.title} className="bg-muted p-10">
+                <div key={h.title} className="bg-muted p-4 md:p-10">
                   <span className="flex h-12 w-12 items-center justify-center rounded-full bg-accent/15 text-accent">
                     <Icon size={20} />
                   </span>
-                  <h3 className="mt-6 font-serif text-2xl text-primary">{h.title}</h3>
+                  <h3 className="mt-6 font-serif text-xl text-primary md:text-2xl">{h.title}</h3>
                   <span className="gold-divider mt-3 inline-block" />
                   <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{h.body}</p>
                 </div>
@@ -77,20 +78,25 @@ function AboutPage() {
         <div className="container-x grid gap-16 lg:grid-cols-2 lg:items-start">
           {/* Left */}
           <div className="lg:sticky lg:top-32">
-            <div className="eyebrow">{t.services.eyebrow}</div>
-            <span className="gold-divider mt-4 inline-block" />
-            <h2 className="mt-4 font-serif text-3xl text-primary md:text-4xl">
-              {t.about.servicesPreviewTitle}
-            </h2>
-            <p className="mt-6 text-sm leading-relaxed text-muted-foreground">
+            {/* Title centered on mobile */}
+            <div className="max-lg:text-center">
+              <div className="eyebrow">{t.services.eyebrow}</div>
+              <span className="gold-divider mt-4 inline-block" />
+              <h2 className="mt-4 font-serif text-3xl text-primary md:text-4xl">
+                {t.about.servicesPreviewTitle}
+              </h2>
+            </div>
+            <p className="mt-6 text-sm leading-relaxed text-muted-foreground max-lg:text-center">
               {t.about.servicesBody}
             </p>
-            <Link
-              to="/services"
-              className="mt-8 inline-flex items-center gap-2 border border-primary px-6 py-3 text-xs uppercase tracking-[0.18em] text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
-            >
-              {t.common.viewAll} <ArrowRight size={14} />
-            </Link>
+            <div className="max-lg:text-center">
+              <Link
+                to="/services"
+                className="mt-8 inline-flex items-center gap-2 border border-primary px-6 py-3 text-xs uppercase tracking-[0.18em] text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
+              >
+                {t.common.viewAll} <ArrowRight size={14} />
+              </Link>
+            </div>
           </div>
 
           {/* Right — service rows */}
@@ -129,12 +135,15 @@ function AboutPage() {
       <section className="bg-background py-24">
         <div className="container-x grid gap-16 lg:grid-cols-2 lg:items-start">
           <div>
-            <div className="eyebrow">{t.about.missionEyebrow}</div>
-            <span className="gold-divider mt-4 inline-block" />
-            <h2 className="mt-4 font-serif text-3xl text-primary md:text-4xl lg:text-5xl">
-              {t.about.missionTitle}
-            </h2>
-            <p className="mt-6 text-sm leading-relaxed text-muted-foreground">
+            {/* Title centered on mobile */}
+            <div className="max-lg:text-center">
+              <div className="eyebrow">{t.about.missionEyebrow}</div>
+              <span className="gold-divider mt-4 inline-block" />
+              <h2 className="mt-4 font-serif text-3xl text-primary md:text-4xl lg:text-5xl">
+                {t.about.missionTitle}
+              </h2>
+            </div>
+            <p className="mt-6 text-sm leading-relaxed text-muted-foreground max-lg:text-center">
               {t.about.missionBody}
             </p>
           </div>
@@ -167,10 +176,11 @@ function AboutPage() {
       {/* ── Values ───────────────────────────────────────────────────── */}
       <section className="bg-muted py-24">
         <div className="container-x">
-          <SectionHeader eyebrow={t.about.eyebrow} title={t.about.valuesTitle} />
-          <div className="mt-12 grid gap-px bg-border md:grid-cols-2 lg:grid-cols-4">
+          <SectionHeader eyebrow={t.about.missionEyebrow} title={t.about.valuesTitle} />
+          {/* 2 cols on mobile → 4 cols on lg+ */}
+          <div className="mt-12 grid grid-cols-2 gap-px bg-border lg:grid-cols-4">
             {t.about.values.map((v) => (
-              <div key={v.title} className="bg-background p-8">
+              <div key={v.title} className="bg-background p-6 md:p-8">
                 <h3 className="font-serif text-xl text-accent">{v.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{v.body}</p>
               </div>
@@ -179,7 +189,7 @@ function AboutPage() {
         </div>
       </section>
 
-     {/* ── CTA ──────────────────────────────────────────────────────── */}
+      {/* ── CTA ──────────────────────────────────────────────────────── */}
       <section className="bg-accent/10 py-24">
         <div className="container-x text-center">
           <span className="gold-divider inline-block" />

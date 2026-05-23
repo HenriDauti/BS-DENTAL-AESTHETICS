@@ -20,9 +20,7 @@ function LangToggle({ lang, setLang }: { lang: string; setLang: (l: "sq" | "en")
         type="button"
         onClick={() => setLang("sq")}
         className={`px-3 py-1.5 transition-colors ${
-          lang === "sq"
-            ? "bg-primary text-primary-foreground"
-            : "text-primary/60 hover:text-primary"
+          lang === "sq" ? "bg-primary text-primary-foreground" : "text-primary/60 hover:text-primary"
         }`}
       >
         SQ
@@ -31,9 +29,7 @@ function LangToggle({ lang, setLang }: { lang: string; setLang: (l: "sq" | "en")
         type="button"
         onClick={() => setLang("en")}
         className={`px-3 py-1.5 transition-colors ${
-          lang === "en"
-            ? "bg-primary text-primary-foreground"
-            : "text-primary/60 hover:text-primary"
+          lang === "en" ? "bg-primary text-primary-foreground" : "text-primary/60 hover:text-primary"
         }`}
       >
         EN
@@ -49,11 +45,11 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/85 backdrop-blur">
       <div className="container-x flex h-20 items-center justify-between">
-        <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
+        <Link to="/" className="flex items-center gap-2" onClick={() => setOpen(false)}>
           <img src={logo} alt="BS Dental Clinic & Aesthetics" className="h-14 w-14 object-contain" />
-          <div className="hidden flex-col leading-tight sm:flex">
-            <span className="font-serif text-lg text-primary">BS Dental Clinic</span>
-            <span className="text-[10px] tracking-[0.25em] text-accent uppercase">& Aesthetics</span>
+          <div className="flex flex-col leading-tight">
+            <span className="font-serif text-sm text-primary sm:text-lg">BS Dental Clinic</span>
+            <span className="text-[9px] tracking-[0.2em] text-accent uppercase sm:text-[10px] sm:tracking-[0.25em]">& Aesthetics</span>
           </div>
         </Link>
 
@@ -77,7 +73,7 @@ export function Header() {
             <LangToggle lang={lang} setLang={setLang} />
           </div>
           
-          <a  href={`mailto:${CLINIC.email}`}
+           <a href={`mailto:${CLINIC.email}`}
             className="hidden bg-primary px-5 py-2.5 text-xs font-medium uppercase tracking-[0.18em] text-primary-foreground transition-colors hover:bg-accent hover:text-accent-foreground md:inline-flex"
           >
             {t.nav.book}
@@ -112,7 +108,7 @@ export function Header() {
             <div className="mt-4 flex items-center justify-between">
               <LangToggle lang={lang} setLang={setLang} />
               
-               <a href={`mailto:${CLINIC.email}`}
+              <a  href={`mailto:${CLINIC.email}`}
                 className="bg-primary px-5 py-2.5 text-xs uppercase tracking-[0.18em] text-primary-foreground"
               >
                 {t.nav.book}

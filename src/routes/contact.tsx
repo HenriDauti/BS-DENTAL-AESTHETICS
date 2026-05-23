@@ -46,30 +46,30 @@ function ContactPage() {
         </div>
       </section>
 
-      {/* Contact cards */}
+      {/* Contact cards — always 3 cols (one row on mobile too) */}
       <section className="bg-background py-20">
         <div className="container-x">
-          <div className="grid gap-px bg-border md:grid-cols-3">
+          <div className="grid grid-cols-3 gap-px bg-border">
             {t.contact.cards.map((c) => {
               const Icon = cardIcon(c.kind);
               return (
-                
-                 <a key={c.kind}
+                <a
+                  key={c.kind}
                   href={cardHref(c.kind)}
                   target={c.kind === "email" ? undefined : "_blank"}
                   rel="noreferrer"
-                  className="group flex flex-col bg-background p-10 transition-colors hover:bg-muted"
+                  className="group flex flex-col bg-background p-4 transition-colors hover:bg-muted md:p-10"
                 >
-                  <span className="flex h-12 w-12 items-center justify-center rounded-full bg-accent/15 text-accent">
-                    <Icon size={20} />
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-accent/15 text-accent md:h-12 md:w-12">
+                    <Icon size={18} />
                   </span>
-                  <div className="mt-6 text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                  <div className="mt-4 text-xs uppercase tracking-[0.18em] text-muted-foreground">
                     {c.title}
                   </div>
-                  <div className="mt-2 font-serif text-xl text-primary">{c.value}</div>
-                  <p className="mt-2 text-sm text-muted-foreground">{c.hint}</p>
-                  <span className="mt-6 inline-flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-accent">
-                    {c.cta} <ExternalLink size={12} />
+                  <div className="mt-1 break-all font-serif text-sm text-primary md:text-xl">{c.value}</div>
+                  <p className="mt-1 hidden text-sm text-muted-foreground md:block">{c.hint}</p>
+                  <span className="mt-3 inline-flex items-center gap-1 text-xs uppercase tracking-[0.18em] text-accent md:mt-6 md:gap-2">
+                    {c.cta} <ExternalLink size={11} />
                   </span>
                 </a>
               );
@@ -89,14 +89,16 @@ function ContactPage() {
 
           {/* Form */}
           <div>
-            <div className="eyebrow">{t.contact.formEyebrow}</div>
-            <span className="gold-divider mt-3 inline-block" />
-            <h2 className="mt-4 font-serif text-3xl text-primary md:text-4xl">
-              {t.contact.formTitle}
-            </h2>
-            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-              {t.contact.formSubtitle}
-            </p>
+            <div className="max-lg:text-center">
+              <div className="eyebrow">{t.contact.formEyebrow}</div>
+              <span className="gold-divider mt-3 inline-block" />
+              <h2 className="mt-4 font-serif text-3xl text-primary md:text-4xl">
+                {t.contact.formTitle}
+              </h2>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                {t.contact.formSubtitle}
+              </p>
+            </div>
             <div className="mt-8">
               <AppointmentForm />
             </div>
@@ -104,14 +106,16 @@ function ContactPage() {
 
           {/* Map */}
           <div className="flex flex-col">
-            <div className="eyebrow">{t.contact.map}</div>
-            <span className="gold-divider mt-3 inline-block" />
-            <h2 className="mt-4 font-serif text-3xl text-primary md:text-4xl">
-              {t.common.addressValue}
-            </h2>
-            <p className="mt-3 text-sm text-muted-foreground">
-              {t.common.hoursValue}
-            </p>
+            <div className="max-lg:text-center">
+              <div className="eyebrow">{t.contact.map}</div>
+              <span className="gold-divider mt-3 inline-block" />
+              <h2 className="mt-4 font-serif text-3xl text-primary md:text-4xl">
+                {t.common.addressValue}
+              </h2>
+              <p className="mt-3 text-sm text-muted-foreground">
+                {t.common.hoursValue}
+              </p>
+            </div>
             <div className="mt-6 overflow-hidden border border-border">
               <iframe
                 title="BS Dental Clinic & Aesthetics — Map"
@@ -121,11 +125,11 @@ function ContactPage() {
                 className="h-80 w-full border-0 lg:h-96"
               />
             </div>
-            
-             <a href={CLINIC.mapsUrl}
+            <a
+              href={CLINIC.mapsUrl}
               target="_blank"
               rel="noreferrer"
-              className="mt-4 inline-flex items-center gap-2 self-start text-xs uppercase tracking-[0.18em] text-accent hover:text-primary transition-colors"
+              className="mt-4 inline-flex items-center gap-2 self-start text-xs uppercase tracking-[0.18em] text-accent transition-colors hover:text-primary"
             >
               <MapPin size={13} />
               {t.common.address} <ArrowRight size={12} />

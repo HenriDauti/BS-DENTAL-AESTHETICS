@@ -238,7 +238,7 @@ export const translations = {
       hours: "Hours",
       hoursValue: "Monday – Sunday: 09:00–20:00",
       address: "Address",
-      addressValue: "Street Joklin Persi, Kashar, Tirana",
+      addressValue: "Joklin Persi Street, Kashar, Tirana",
       email: "Email",
       followUs: "Follow us",
       comingSoon: "Coming soon",
@@ -415,7 +415,7 @@ export const translations = {
       cardsTitle: "How to reach us",
       cards: [
         { kind: "email", title: "Email", value: "bs.dental.aesthetics@gmail.com", hint: "Send us an email", cta: "Click to contact" },
-        { kind: "address", title: "Address", value: "Rruga Joklin Persi, Kashar, Tirana", hint: "Visit our clinic", cta: "View on map" },
+        { kind: "address", title: "Address", value: "Joklin Persi Street, Kashar, Tirana", hint: "Visit our clinic", cta: "View on map" },
         { kind: "instagram", title: "Instagram", value: "@dental_aesthetics_bs", hint: "Follow us on Instagram", cta: "Open profile" },
       ],
       formEyebrow: "Book Appointment",

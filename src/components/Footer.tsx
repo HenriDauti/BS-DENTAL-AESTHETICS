@@ -10,7 +10,7 @@ const MAP_EMBED = `https://maps.google.com/maps?q=${COORDS.lat},${COORDS.lng}&z=
 export function Footer() {
   const { t, lang } = useLang();
 
-const serviceLinks = [
+  const serviceLinks = [
     { hash: "dentistri-estetike", label: lang === "sq" ? "Dentistri Estetike" : "Aesthetic Dentistry" },
     { hash: "endodonti-protetike", label: lang === "sq" ? "Endodonti & Protetikë" : "Endodontics & Prosthetics" },
     { hash: "implante-kirurgji", label: lang === "sq" ? "Implante & Kirurgji" : "Implants & Surgery" },
@@ -31,11 +31,17 @@ const serviceLinks = [
   return (
     <footer className="mt-24 border-t border-border bg-primary text-primary-foreground">
 
-      {/* Main columns */}
-      <div className="container-x grid gap-10 py-16 sm:grid-cols-2 lg:grid-cols-4">
+      {/* Main columns
+          Mobile  (default):  2-col grid
+            Row 1 — Brand spans both cols
+            Row 2 — Services | Sitemap  (side by side ✓)
+            Row 3 — Contact spans both cols
+          Desktop (lg):       4-col grid, all in one row
+      */}
+      <div className="container-x grid grid-cols-2 gap-10 py-16 lg:grid-cols-4">
 
-        {/* Brand */}
-        <div className="sm:col-span-2 lg:col-span-1">
+        {/* Brand — full width on mobile, 1 col on desktop */}
+        <div className="col-span-2 lg:col-span-1">
           <div className="flex items-center gap-3">
             <img src={logo} alt="" className="h-14 w-14 object-contain brightness-0 invert" />
             <div className="leading-tight">
@@ -46,7 +52,7 @@ const serviceLinks = [
           <p className="mt-6 text-sm text-primary-foreground/70 leading-relaxed">{tagline}</p>
         </div>
 
-  {/* Services */}
+        {/* Services — col 1 on mobile */}
         <div>
           <h4 className="font-serif text-base text-accent">{t.nav.services}</h4>
           <span className="gold-divider mt-2 mb-4" />
@@ -59,7 +65,7 @@ const serviceLinks = [
           </ul>
         </div>
 
-        {/* Sitemap */}
+        {/* Sitemap (Pages) — col 2 on mobile, same row as Services */}
         <div>
           <h4 className="font-serif text-base text-accent">{t.footer.sitemap}</h4>
           <span className="gold-divider mt-2 mb-4" />
@@ -72,8 +78,8 @@ const serviceLinks = [
           </ul>
         </div>
 
-        {/* Contact */}
-        <div>
+        {/* Contact — full width on mobile, 1 col on desktop */}
+        <div className="col-span-2 lg:col-span-1">
           <h4 className="font-serif text-base text-accent">{t.footer.contact}</h4>
           <span className="gold-divider mt-2 mb-4" />
           <ul className="space-y-3 text-sm text-primary-foreground/80">

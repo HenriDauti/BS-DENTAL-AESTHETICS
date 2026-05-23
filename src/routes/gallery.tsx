@@ -73,10 +73,11 @@ function GalleryPage() {
 
       <section className="bg-background py-20">
         <div className="container-x">
-          <div className="mb-12 flex flex-wrap justify-center gap-2">
+          {/* Single scrollable row on mobile, wraps centered on md+ */}
+          <div className="mb-12 flex flex-nowrap gap-2 overflow-x-auto pb-1 md:flex-wrap md:justify-center md:overflow-visible">
             {filters.map((f) => {
               const active = filter === f.key;
-              const base = "px-5 py-2.5 text-xs uppercase tracking-[0.18em] transition-colors";
+              const base = "flex-none px-5 py-2.5 text-xs uppercase tracking-[0.18em] transition-colors";
               const on = "bg-primary text-primary-foreground";
               const off = "border border-border text-primary/70 hover:border-accent hover:text-accent";
               return (
@@ -93,35 +94,37 @@ function GalleryPage() {
           <GalleryGrid images={filtered} />
         </div>
       </section>
-{showClinicImages && (
-      <section className="bg-muted py-20">
-        <div className="container-x">
-          <div className="mb-10 text-center">
-            <div className="eyebrow">{t.gallery.eyebrow}</div>
-            <span className="gold-divider mt-4 inline-block" />
-            <h2 className="mt-4 font-serif text-3xl text-primary md:text-4xl">
-              {t.gallery.clinicTitle}
-            </h2>
-            <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
-              {clinicSubtitle}
-            </p>
+
+      {showClinicImages && (
+        <section className="bg-muted py-20">
+          <div className="container-x">
+            <div className="mb-10 text-center">
+              <div className="eyebrow">{t.gallery.eyebrow}</div>
+              <span className="gold-divider mt-4 inline-block" />
+              <h2 className="mt-4 font-serif text-3xl text-primary md:text-4xl">
+                {t.gallery.clinicTitle}
+              </h2>
+              <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
+                {clinicSubtitle}
+              </p>
+            </div>
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {clinicPhotos.map((photo, i) => (
+                <div key={i} className="relative aspect-[4/3] overflow-hidden bg-background">
+                  <img
+                    src={photo.src}
+                    alt={photo.alt}
+                    loading="lazy"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {clinicPhotos.map((photo, i) => (
-              <div key={i} className="relative aspect-[4/3] overflow-hidden bg-background">
-                <img
-                  src={photo.src}
-                  alt={photo.alt}
-                  loading="lazy"
-                  className="h-full w-full object-cover"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-)}
-<section className="bg-accent/10 py-20">
+        </section>
+      )}
+
+      <section className="bg-accent/10 py-20">
         <div className="container-x text-center">
           <span className="gold-divider inline-block" />
           <h2 className="mt-4 font-serif text-3xl text-primary md:text-4xl">
