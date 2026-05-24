@@ -1,0 +1,250 @@
+{
+  "%23tanstack-start-plugin-adapters": {
+    "file": "assets/__23tanstack-start-plugin-adapters-Cwee5PKy.js",
+    "name": "__23tanstack-start-plugin-adapters",
+    "src": "%23tanstack-start-plugin-adapters",
+    "isDynamicEntry": true
+  },
+  "C:/Users/User/Desktop/neat launches/websites/bs-dental-aesthetics/src/styles.css": {
+    "file": "assets/styles-HLM3iFfP.css",
+    "src": "C:/Users/User/Desktop/neat launches/websites/bs-dental-aesthetics/src/styles.css"
+  },
+  "_SectionHeader-DYVB0aTy.js": {
+    "file": "assets/SectionHeader-DYVB0aTy.js",
+    "name": "SectionHeader",
+    "imports": [
+      "_server-BtEOeexM.js"
+    ]
+  },
+  "_arrow-right-D-sx4Pdx.js": {
+    "file": "assets/arrow-right-D-sx4Pdx.js",
+    "name": "arrow-right",
+    "imports": [
+      "_router-BUVDBSpv.js"
+    ]
+  },
+  "_check-Sr_gexyS.js": {
+    "file": "assets/check-Sr_gexyS.js",
+    "name": "check",
+    "imports": [
+      "_router-BUVDBSpv.js"
+    ]
+  },
+  "_gallery-DlfNjR0L.js": {
+    "file": "assets/gallery-DlfNjR0L.js",
+    "name": "gallery",
+    "imports": [
+      "_router-BUVDBSpv.js"
+    ],
+    "assets": [
+      "assets/lips-1-63DwwWx-.jpeg",
+      "assets/lips-2-1s0jwhen.jpeg",
+      "assets/lips-3-iZnfz3ve.jpeg",
+      "assets/veneers-1-95UuUHY2.jpeg",
+      "assets/veneers-2-EKpcSIkh.jpeg",
+      "assets/whitening-1-BQVQC80v.jpeg"
+    ]
+  },
+  "_router-BUVDBSpv.js": {
+    "file": "assets/router-BUVDBSpv.js",
+    "name": "router",
+    "isDynamicEntry": true,
+    "imports": [
+      "_server-BtEOeexM.js"
+    ],
+    "dynamicImports": [
+      "src/routes/services.tsx?tsr-split=component",
+      "src/routes/gallery.tsx?tsr-split=component",
+      "src/routes/contact.tsx?tsr-split=component",
+      "src/routes/about.tsx?tsr-split=component",
+      "src/routes/index.tsx?tsr-split=component"
+    ],
+    "assets": [
+      "assets/logo-zrHsdw-X.png",
+      "assets/styles-HLM3iFfP.css"
+    ]
+  },
+  "_server-BtEOeexM.js": {
+    "file": "assets/server-BtEOeexM.js",
+    "name": "server",
+    "isDynamicEntry": true,
+    "dynamicImports": [
+      "tanstack-start-manifest:v",
+      "_router-BUVDBSpv.js",
+      "src/start.ts",
+      "%23tanstack-start-plugin-adapters"
+    ]
+  },
+  "_worker-entry-DRPG0wBI.js": {
+    "file": "assets/worker-entry-DRPG0wBI.js",
+    "name": "worker-entry",
+    "dynamicImports": [
+      "_server-BtEOeexM.js"
+    ]
+  },
+  "src/assets/Dentistri Estetike.png": {
+    "file": "assets/Dentistri Estetike-DbliDOxo.png",
+    "src": "src/assets/Dentistri Estetike.png"
+  },
+  "src/assets/Endodonti & Protetikë.png": {
+    "file": "assets/Endodonti _ Protetikë-C7tXUXe1.png",
+    "src": "src/assets/Endodonti & Protetikë.png"
+  },
+  "src/assets/Facial Fillers & Facial Treatment.png": {
+    "file": "assets/Facial Fillers _ Facial Treatment-Bwbzhx0G.png",
+    "src": "src/assets/Facial Fillers & Facial Treatment.png"
+  },
+  "src/assets/Implante & Kirurgji.png": {
+    "file": "assets/Implante _ Kirurgji-p_yhQHXk.png",
+    "src": "src/assets/Implante & Kirurgji.png"
+  },
+  "src/assets/Ortodonci & Maskerina Transparente.png": {
+    "file": "assets/Ortodonci _ Maskerina Transparente-BKMWaOzT.png",
+    "src": "src/assets/Ortodonci & Maskerina Transparente.png"
+  },
+  "src/assets/about.jpg": {
+    "file": "assets/about-AiML5-bm.jpg",
+    "src": "src/assets/about.jpg"
+  },
+  "src/assets/gallery/lips-1.jpeg": {
+    "file": "assets/lips-1-63DwwWx-.jpeg",
+    "src": "src/assets/gallery/lips-1.jpeg"
+  },
+  "src/assets/gallery/lips-2.jpeg": {
+    "file": "assets/lips-2-1s0jwhen.jpeg",
+    "src": "src/assets/gallery/lips-2.jpeg"
+  },
+  "src/assets/gallery/lips-3.jpeg": {
+    "file": "assets/lips-3-iZnfz3ve.jpeg",
+    "src": "src/assets/gallery/lips-3.jpeg"
+  },
+  "src/assets/gallery/veneers-1.jpeg": {
+    "file": "assets/veneers-1-95UuUHY2.jpeg",
+    "src": "src/assets/gallery/veneers-1.jpeg"
+  },
+  "src/assets/gallery/veneers-2.jpeg": {
+    "file": "assets/veneers-2-EKpcSIkh.jpeg",
+    "src": "src/assets/gallery/veneers-2.jpeg"
+  },
+  "src/assets/gallery/whitening-1.jpeg": {
+    "file": "assets/whitening-1-BQVQC80v.jpeg",
+    "src": "src/assets/gallery/whitening-1.jpeg"
+  },
+  "src/assets/hero.jpg": {
+    "file": "assets/hero-vrfxoig4.jpg",
+    "src": "src/assets/hero.jpg"
+  },
+  "src/assets/logo.png": {
+    "file": "assets/logo-zrHsdw-X.png",
+    "src": "src/assets/logo.png"
+  },
+  "src/assets/team/doctor-injection.jpeg": {
+    "file": "assets/doctor-injection-yEfvXuv6.jpeg",
+    "src": "src/assets/team/doctor-injection.jpeg"
+  },
+  "src/assets/team/doctor-portrait.jpeg": {
+    "file": "assets/doctor-portrait-DuWx4mPP.jpeg",
+    "src": "src/assets/team/doctor-portrait.jpeg"
+  },
+  "src/assets/team/doctor-working.jpeg": {
+    "file": "assets/doctor-working-Oy_H5u2c.jpeg",
+    "src": "src/assets/team/doctor-working.jpeg"
+  },
+  "src/routes/about.tsx?tsr-split=component": {
+    "file": "assets/about-kcrpE-oO.js",
+    "name": "about",
+    "src": "src/routes/about.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "_server-BtEOeexM.js",
+      "_router-BUVDBSpv.js",
+      "_SectionHeader-DYVB0aTy.js",
+      "_arrow-right-D-sx4Pdx.js"
+    ]
+  },
+  "src/routes/contact.tsx?tsr-split=component": {
+    "file": "assets/contact-pSazcPiC.js",
+    "name": "contact",
+    "src": "src/routes/contact.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "_server-BtEOeexM.js",
+      "_router-BUVDBSpv.js",
+      "_arrow-right-D-sx4Pdx.js"
+    ]
+  },
+  "src/routes/gallery.tsx?tsr-split=component": {
+    "file": "assets/gallery-DHFYgbA7.js",
+    "name": "gallery",
+    "src": "src/routes/gallery.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "_server-BtEOeexM.js",
+      "_router-BUVDBSpv.js",
+      "_gallery-DlfNjR0L.js",
+      "_arrow-right-D-sx4Pdx.js"
+    ]
+  },
+  "src/routes/index.tsx?tsr-split=component": {
+    "file": "assets/index-Dpa9KlSo.js",
+    "name": "index",
+    "src": "src/routes/index.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "_server-BtEOeexM.js",
+      "_router-BUVDBSpv.js",
+      "_SectionHeader-DYVB0aTy.js",
+      "_gallery-DlfNjR0L.js",
+      "_arrow-right-D-sx4Pdx.js",
+      "_check-Sr_gexyS.js"
+    ],
+    "assets": [
+      "assets/hero-vrfxoig4.jpg",
+      "assets/doctor-working-Oy_H5u2c.jpeg",
+      "assets/doctor-portrait-DuWx4mPP.jpeg"
+    ]
+  },
+  "src/routes/services.tsx?tsr-split=component": {
+    "file": "assets/services-BDDtcf4Q.js",
+    "name": "services",
+    "src": "src/routes/services.tsx?tsr-split=component",
+    "isDynamicEntry": true,
+    "imports": [
+      "_server-BtEOeexM.js",
+      "_router-BUVDBSpv.js",
+      "_check-Sr_gexyS.js",
+      "_arrow-right-D-sx4Pdx.js"
+    ],
+    "assets": [
+      "assets/Dentistri Estetike-DbliDOxo.png",
+      "assets/Endodonti _ Protetikë-C7tXUXe1.png",
+      "assets/Implante _ Kirurgji-p_yhQHXk.png",
+      "assets/Ortodonci _ Maskerina Transparente-BKMWaOzT.png",
+      "assets/Facial Fillers _ Facial Treatment-Bwbzhx0G.png"
+    ]
+  },
+  "src/start.ts": {
+    "file": "assets/start-O6PlZhsU.js",
+    "name": "start",
+    "src": "src/start.ts",
+    "isDynamicEntry": true,
+    "imports": [
+      "_worker-entry-DRPG0wBI.js"
+    ]
+  },
+  "tanstack-start-manifest:v": {
+    "file": "assets/_tanstack-start-manifest_v-BHNXOq2y.js",
+    "name": "_tanstack-start-manifest_v",
+    "src": "tanstack-start-manifest:v",
+    "isDynamicEntry": true
+  },
+  "virtual:cloudflare/worker-entry": {
+    "file": "index.js",
+    "name": "index",
+    "src": "virtual:cloudflare/worker-entry",
+    "isEntry": true,
+    "imports": [
+      "_worker-entry-DRPG0wBI.js"
+    ]
+  }
+}

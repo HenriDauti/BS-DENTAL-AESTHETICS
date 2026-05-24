@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Mail, MapPin, Clock, Instagram, ArrowRight, ExternalLink } from "lucide-react";
+import { Mail, MapPin, Clock, Instagram, ArrowRight, ExternalLink, Phone } from "lucide-react";
 import { useLang } from "@/i18n/LanguageContext";
 import { CLINIC } from "@/i18n/translations";
 import { AppointmentForm } from "@/components/AppointmentForm";
@@ -23,12 +23,16 @@ function ContactPage() {
   const cardHref = (kind: string) =>
     kind === "email"
       ? "mailto:" + CLINIC.email
+      : kind === "phone"
+      ? "tel:" + CLINIC.phone
       : kind === "address"
       ? CLINIC.mapsUrl
+      : kind === "instagram2"
+      ? CLINIC.instagram2
       : CLINIC.instagram;
 
   const cardIcon = (kind: string) =>
-    kind === "email" ? Mail : kind === "address" ? MapPin : Instagram;
+    kind === "email" ? Mail : kind === "phone" ? Phone : kind === "address" ? MapPin : Instagram;
 
   return (
     <>
@@ -46,35 +50,37 @@ function ContactPage() {
         </div>
       </section>
 
-      {/* Contact cards — always 3 cols (one row on mobile too) */}
+      {/* Contact cards */}
       <section className="bg-background py-20">
         <div className="container-x">
-          <div className="grid grid-cols-3 gap-px bg-border">
-            {t.contact.cards.map((c) => {
-              const Icon = cardIcon(c.kind);
-              return (
-                <a
-                  key={c.kind}
-                  href={cardHref(c.kind)}
-                  target={c.kind === "email" ? undefined : "_blank"}
-                  rel="noreferrer"
-                  className="group flex flex-col bg-background p-4 transition-colors hover:bg-muted md:p-10"
-                >
-                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-accent/15 text-accent md:h-12 md:w-12">
-                    <Icon size={18} />
-                  </span>
-                  <div className="mt-4 text-xs uppercase tracking-[0.18em] text-muted-foreground">
-                    {c.title}
-                  </div>
-                  <div className="mt-1 break-all font-serif text-sm text-primary md:text-xl">{c.value}</div>
-                  <p className="mt-1 hidden text-sm text-muted-foreground md:block">{c.hint}</p>
-                  <span className="mt-3 inline-flex items-center gap-1 text-xs uppercase tracking-[0.18em] text-accent md:mt-6 md:gap-2">
-                    {c.cta} <ExternalLink size={11} />
-                  </span>
-                </a>
-              );
-            })}
-          </div>
+     <div className="grid grid-cols-6 lg:grid-cols-5 gap-px bg-border">
+  {t.contact.cards.map((c, i) => {
+    const Icon = cardIcon(c.kind);
+    return (
+      
+       <a key={c.kind}
+        href={cardHref(c.kind)}
+        target={c.kind === "email" ? undefined : "_blank"}
+        rel="noreferrer"
+        className={`group flex flex-col bg-background p-4 transition-colors hover:bg-muted md:p-10 ${
+          i < 3 ? "col-span-2" : "col-span-3"
+        } lg:col-span-1`}
+      >
+        <span className="flex h-10 w-10 items-center justify-center rounded-full bg-accent/15 text-accent md:h-12 md:w-12">
+          <Icon size={18} />
+        </span>
+        <div className="mt-4 text-xs uppercase tracking-[0.18em] text-muted-foreground">
+          {c.title}
+        </div>
+        <div className="mt-1 break-all font-serif text-sm text-primary md:text-xl">{c.value}</div>
+        <p className="mt-1 hidden text-sm text-muted-foreground md:block">{c.hint}</p>
+        <span className="mt-3 inline-flex items-center gap-1 text-xs uppercase tracking-[0.18em] text-accent md:mt-6 md:gap-2">
+          {c.cta} <ExternalLink size={11} />
+        </span>
+      </a>
+    );
+  })}
+</div>
 
           <div className="mt-10 flex items-center justify-center gap-3 text-sm text-muted-foreground">
             <Clock size={16} className="shrink-0 text-accent" />
@@ -125,8 +131,8 @@ function ContactPage() {
                 className="h-80 w-full border-0 lg:h-96"
               />
             </div>
-            <a
-              href={CLINIC.mapsUrl}
+            
+            <a  href={CLINIC.mapsUrl}
               target="_blank"
               rel="noreferrer"
               className="mt-4 inline-flex items-center gap-2 self-start text-xs uppercase tracking-[0.18em] text-accent transition-colors hover:text-primary"

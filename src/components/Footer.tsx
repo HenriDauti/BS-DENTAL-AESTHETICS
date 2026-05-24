@@ -1,11 +1,13 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, Mail, MapPin, Clock } from "lucide-react";
+import { Instagram, Mail, MapPin, Clock, Phone } from "lucide-react";
 import { useLang } from "@/i18n/LanguageContext";
 import { CLINIC } from "@/i18n/translations";
 import logo from "@/assets/logo.png";
 
 const COORDS = { lat: 41.324177, lng: 19.780306 };
 const MAP_EMBED = `https://maps.google.com/maps?q=${COORDS.lat},${COORDS.lng}&z=17&output=embed`;
+
+const NEATLAUNCHES_IG = "https://instagram.com/neatlaunches";
 
 export function Footer() {
   const { t, lang } = useLang();
@@ -27,6 +29,9 @@ export function Footer() {
     lang === "sq"
       ? "E Hënë – E Diel: 09:00–14:00 & 16:00–20:00"
       : "Monday – Sunday: 09:00–14:00 & 16:00–20:00";
+
+  const websiteCredit =
+    lang === "sq" ? "Faqja nga" : "Website by";
 
   return (
     <footer className="mt-24 border-t border-border bg-primary text-primary-foreground">
@@ -98,9 +103,18 @@ export function Footer() {
               </a>
             </li>
             <li className="flex items-start gap-2">
+              <Phone size={14} className="mt-0.5 shrink-0 text-accent" />
+              <a href={`tel:${CLINIC.phone}`} className="hover:text-accent transition-colors">
+                {CLINIC.phone}
+              </a>
+            </li>
+            <li className="flex items-start gap-2">
               <Instagram size={14} className="mt-0.5 shrink-0 text-accent" />
               <a href={CLINIC.instagram} target="_blank" rel="noreferrer" className="hover:text-accent transition-colors">
                 {CLINIC.instagramHandle}
+              </a>/ <Instagram size={14} className="mt-0.5 shrink-0 text-accent" />
+              <a href={CLINIC.instagram2} target="_blank" rel="noreferrer" className="hover:text-accent transition-colors">
+                {CLINIC.instagramHandle2}
               </a>
             </li>
           </ul>
@@ -132,8 +146,26 @@ export function Footer() {
 
       {/* Copyright */}
       <div className="border-t border-primary-foreground/10 mt-8">
-        <div className="container-x py-6 text-center text-xs text-primary-foreground/60">
-          © {new Date().getFullYear()} {CLINIC.name}. {t.footer.rights}
+        <div className="container-x py-6 flex flex-col items-center gap-1.5 text-center text-xs text-primary-foreground/60 sm:flex-row sm:justify-between">
+          <span>© {new Date().getFullYear()} {CLINIC.name}. {t.footer.rights}</span>
+          <span className="flex flex-wrap items-center justify-center gap-x-2 gap-y-0.5">
+            {websiteCredit}{" "}
+            <a
+              href={NEATLAUNCHES_IG}
+              target="_blank"
+              rel="noreferrer"
+              className="text-accent/70 transition-colors hover:text-accent"
+            >
+              @neatlaunches
+            </a>
+            <span className="text-primary-foreground/30">·</span>
+            <a
+              href="mailto:neatlaunches@gmail.com"
+              className="text-accent/70 transition-colors hover:text-accent"
+            >
+              neatlaunches@gmail.com
+            </a>
+          </span>
         </div>
       </div>
 
