@@ -10,15 +10,6 @@ import doctorWorking from "@/assets/team/doctor-working.jpeg";
 import doctorPortrait from "@/assets/team/doctor-portrait.jpeg";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { name: "description", content: "Klinikë moderne dentare dhe estetike në Kashar. Veneers, implante, ortodonci dhe mbushës buzësh me Dr. Bia & Dr. Miti Sinani." },
-      { property: "og:title", content: "BS Dental Clinic & Aesthetics" },
-      { property: "og:description", content: "Buzëqeshje që frymëzojnë besim. Dentistri estetike & trajtime estetike në Tiranë." },
-      { property: "og:url", content: "/" },
-    ],
-    links: [{ rel: "canonical", href: "/" }],
-  }),
   component: HomePage,
 });
 
@@ -103,7 +94,6 @@ function HomePage() {
             <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-primary/40 to-transparent" />
           </div>
           <div>
-            {/* Title centered on mobile */}
             <div className="max-lg:text-center">
               <div className="eyebrow">{t.home.whyEyebrow}</div>
               <span className="gold-divider mt-4 inline-block" />
@@ -130,7 +120,6 @@ function HomePage() {
       <section className="bg-primary py-14 text-primary-foreground md:py-20">
         <div className="container-x">
           <div className="grid gap-8 md:grid-cols-[1fr_2fr] md:items-end md:gap-10">
-            {/* Title centered on mobile */}
             <div className="max-md:text-center">
               <div className="text-[10px] uppercase tracking-[0.32em] text-accent">{t.home.statsEyebrow}</div>
               <span className="gold-divider mt-4 inline-block" />
@@ -193,8 +182,6 @@ function HomePage() {
                 ))}
               </div>
             </div>
-
-            {/* Controls row: arrow · dots · arrow */}
             <div className="mt-5 flex items-center justify-center gap-4">
               <button
                 onClick={() => setBaSlide((s) => (s - 1 + beforeAfter.length) % beforeAfter.length)}
@@ -203,20 +190,16 @@ function HomePage() {
               >
                 <ChevronLeft size={16} />
               </button>
-
               <div className="flex items-center gap-2">
                 {beforeAfter.map((_, i) => (
                   <button
                     key={i}
                     onClick={() => setBaSlide(i)}
                     aria-label={`Slide ${i + 1}`}
-                    className={`h-1.5 rounded-full transition-all duration-200 ${
-                      baSlide === i ? "w-5 bg-accent" : "w-1.5 bg-accent/30"
-                    }`}
+                    className={`h-1.5 rounded-full transition-all duration-200 ${baSlide === i ? "w-5 bg-accent" : "w-1.5 bg-accent/30"}`}
                   />
                 ))}
               </div>
-
               <button
                 onClick={() => setBaSlide((s) => (s + 1) % beforeAfter.length)}
                 aria-label="Next slide"
@@ -248,7 +231,6 @@ function HomePage() {
       <section className="bg-primary py-14 text-primary-foreground md:py-24">
         <div className="container-x grid gap-10 lg:grid-cols-2 lg:items-center lg:gap-12">
           <div>
-            {/* Title centered on mobile */}
             <div className="max-lg:text-center">
               <div className="text-[10px] font-medium uppercase tracking-[0.32em] text-accent">{t.home.doctorsEyebrow}</div>
               <span className="gold-divider mt-4 inline-block" />
@@ -290,7 +272,7 @@ function HomePage() {
                   <figure key={tm.name} className="relative w-full flex-none border border-border bg-muted/40 p-6">
                     <Quote className="absolute right-5 top-5 text-accent/30" size={30} />
                     <blockquote className="font-serif text-base leading-relaxed text-primary">
-                      "{lang === "sq" ? tm.quote : tm.quoteEn}"
+                      &ldquo;{lang === "sq" ? tm.quote : tm.quoteEn}&rdquo;
                     </blockquote>
                     <figcaption className="mt-5 flex items-center gap-3">
                       <span className="h-px w-8 bg-accent" />
@@ -305,8 +287,6 @@ function HomePage() {
                 ))}
               </div>
             </div>
-
-            {/* Controls row: arrow · dots · arrow */}
             <div className="mt-5 flex items-center justify-center gap-4">
               <button
                 onClick={() => setTmSlide((s) => (s - 1 + testimonials.length) % testimonials.length)}
@@ -315,20 +295,16 @@ function HomePage() {
               >
                 <ChevronLeft size={16} />
               </button>
-
               <div className="flex items-center gap-2">
                 {testimonials.map((_, i) => (
                   <button
                     key={i}
                     onClick={() => setTmSlide(i)}
                     aria-label={`Testimonial ${i + 1}`}
-                    className={`h-1.5 rounded-full transition-all duration-200 ${
-                      tmSlide === i ? "w-5 bg-accent" : "w-1.5 bg-accent/30"
-                    }`}
+                    className={`h-1.5 rounded-full transition-all duration-200 ${tmSlide === i ? "w-5 bg-accent" : "w-1.5 bg-accent/30"}`}
                   />
                 ))}
               </div>
-
               <button
                 onClick={() => setTmSlide((s) => (s + 1) % testimonials.length)}
                 aria-label="Next testimonial"
@@ -345,7 +321,7 @@ function HomePage() {
               <figure key={tm.name} className="relative border border-border bg-muted/40 p-8">
                 <Quote className="absolute right-6 top-6 text-accent/30" size={30} />
                 <blockquote className="font-serif text-xl leading-relaxed text-primary">
-                  "{lang === "sq" ? tm.quote : tm.quoteEn}"
+                  &ldquo;{lang === "sq" ? tm.quote : tm.quoteEn}&rdquo;
                 </blockquote>
                 <figcaption className="mt-6 flex items-center gap-3">
                   <span className="h-px w-8 bg-accent" />
@@ -366,7 +342,6 @@ function HomePage() {
       <section className="bg-muted py-14 md:py-24">
         <div className="container-x grid gap-10 lg:grid-cols-[1fr_1.4fr] lg:gap-16">
           <div>
-            {/* Title centered on mobile */}
             <div className="max-lg:text-center">
               <div className="eyebrow">{t.home.faqEyebrow}</div>
               <span className="gold-divider mt-4 inline-block" />
