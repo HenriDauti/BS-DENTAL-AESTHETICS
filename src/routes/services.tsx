@@ -6,12 +6,98 @@ import { serviceImage } from "@/data/serviceImages";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { name: "description", content: "Dentistri estetike, endodonti, implante, ortodonci dhe trajtime estetike të fytyrës në një klinikë të vetme në Tiranë." },
+      { title: "Shërbimet — BS Dental Clinic & Aesthetics | Veneers, Implante, Ortodonci Tiranë" },
+      {
+        name: "description",
+        content:
+          "Dentistri estetike (veneers Emax), implante dentare, ortodonci me maskerina transparente, endodonci, protetikë dhe trajtime estetike të fytyrës (facial fillers) në Kashar, Tiranë.",
+      },
+      { name: "robots", content: "index, follow" },
+      { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "BS Dental Clinic & Aesthetics" },
       { property: "og:title", content: "Shërbimet — BS Dental Clinic & Aesthetics" },
-      { property: "og:description", content: "Gama e plotë e shërbimeve dentare dhe estetike." },
-      { property: "og:url", content: "/services" },
+      {
+        property: "og:description",
+        content:
+          "Gama e plotë e shërbimeve dentare dhe estetike: veneers, implante, ortodonci, endodonci dhe facial fillers në Tiranë.",
+      },
+      { property: "og:url", content: "https://bsdentalaesthetics.al/services" },
+      { property: "og:image", content: "https://bsdentalaesthetics.al/og-image.jpg" },
     ],
-    links: [{ rel: "canonical", href: "/services" }],
+    links: [{ rel: "canonical", href: "https://bsdentalaesthetics.al/services" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Kryefaqja", item: "https://bsdentalaesthetics.al/" },
+            { "@type": "ListItem", position: 2, name: "Shërbimet", item: "https://bsdentalaesthetics.al/services" },
+          ],
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          name: "Shërbimet e BS Dental Clinic & Aesthetics",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              item: {
+                "@type": "MedicalProcedure",
+                name: "Dentistri Estetike — Veneers Emax",
+                description: "Veneers porcelani Emax, faseta kompozite, zbardhim laser dhe dizajn dixhital i buzëqeshjes.",
+                url: "https://bsdentalaesthetics.al/services#dentistri-estetike",
+              },
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              item: {
+                "@type": "MedicalProcedure",
+                name: "Endodonci & Protetikë",
+                description: "Trajtim kanalesh me rotativë, kurora zirkonia dhe ura fikse mbi implante.",
+                url: "https://bsdentalaesthetics.al/services#endodonti-protetike",
+              },
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              item: {
+                "@type": "MedicalProcedure",
+                name: "Implante Dentare & Kirurgji Orale",
+                description: "Implante dentare premium, augmentim kockor, sinus lift dhe nxjerrje kirurgjikale.",
+                url: "https://bsdentalaesthetics.al/services#implante-kirurgji",
+              },
+            },
+            {
+              "@type": "ListItem",
+              position: 4,
+              item: {
+                "@type": "MedicalProcedure",
+                name: "Ortodonci & Maskerina Transparente",
+                description: "Drejtim dhëmbësh me maskerina transparente ose aparate qeramike dhe metalike.",
+                url: "https://bsdentalaesthetics.al/services#ortodonci-maskerina",
+              },
+            },
+            {
+              "@type": "ListItem",
+              position: 5,
+              item: {
+                "@type": "MedicalProcedure",
+                name: "Facial Fillers & Trajtime Estetike",
+                description: "Mbushës buzësh me hijaluronik, trajtime rinovuese dhe estetikë e fytyrës.",
+                url: "https://bsdentalaesthetics.al/services#facial-fillers-treatment",
+              },
+            },
+          ],
+        }),
+      },
+    ],
   }),
   component: ServicesPage,
 });

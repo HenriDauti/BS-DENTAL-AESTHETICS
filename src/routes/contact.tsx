@@ -7,12 +7,38 @@ import { AppointmentForm } from "@/components/AppointmentForm";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { name: "description", content: "Na kontaktoni në bs.dental.aesthetics@gmail.com ose vizitoni klinikën tonë në Rrugën Joklin Persi, Kashar, Tiranë." },
-      { property: "og:title", content: "Kontakt — BS Dental Clinic & Aesthetics" },
-      { property: "og:description", content: "Rezervoni konsultën tuaj në klinikën BS." },
-      { property: "og:url", content: "/contact" },
+      { title: "Kontakt - BS Dental Clinic & Aesthetics | Rezervo Takim Tiranë" },
+      {
+        name: "description",
+        content:
+          "Kontaktoni BS Dental Clinic & Aesthetics në Kashar, Tiranë. Tel: 0685673071 | Email: bs.dental.aesthetics@gmail.com. Rezervo konsultën tënde sot - E Hënë–E Diel 09:00–20:00.",
+      },
+      { name: "robots", content: "index, follow" },
+      { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "BS Dental Clinic & Aesthetics" },
+      { property: "og:title", content: "Kontakt - BS Dental Clinic & Aesthetics" },
+      {
+        property: "og:description",
+        content:
+          "Rezervoni konsultën tuaj në BS Dental Clinic & Aesthetics, Kashar, Tiranë. Hapet çdo ditë 09:00–20:00.",
+      },
+      { property: "og:url", content: "https://bsdentalaesthetics.al/contact" },
+      { property: "og:image", content: "https://bsdentalaesthetics.al/og-image.jpg" },
     ],
-    links: [{ rel: "canonical", href: "/contact" }],
+    links: [{ rel: "canonical", href: "https://bsdentalaesthetics.al/contact" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Kryefaqja", item: "https://bsdentalaesthetics.al/" },
+            { "@type": "ListItem", position: 2, name: "Kontakt", item: "https://bsdentalaesthetics.al/contact" },
+          ],
+        }),
+      },
+    ],
   }),
   component: ContactPage,
 });
@@ -53,34 +79,34 @@ function ContactPage() {
       {/* Contact cards */}
       <section className="bg-background py-20">
         <div className="container-x">
-     <div className="grid grid-cols-6 lg:grid-cols-5 gap-px bg-border">
-  {t.contact.cards.map((c, i) => {
-    const Icon = cardIcon(c.kind);
-    return (
-      
-       <a key={c.kind}
-        href={cardHref(c.kind)}
-        target={c.kind === "email" ? undefined : "_blank"}
-        rel="noreferrer"
-        className={`group flex flex-col bg-background p-4 transition-colors hover:bg-muted md:p-10 ${
-          i < 3 ? "col-span-2" : "col-span-3"
-        } lg:col-span-1`}
-      >
-        <span className="flex h-10 w-10 items-center justify-center rounded-full bg-accent/15 text-accent md:h-12 md:w-12">
-          <Icon size={18} />
-        </span>
-        <div className="mt-4 text-xs uppercase tracking-[0.18em] text-muted-foreground">
-          {c.title}
-        </div>
-        <div className="mt-1 break-all font-serif text-sm text-primary md:text-xl">{c.value}</div>
-        <p className="mt-1 hidden text-sm text-muted-foreground md:block">{c.hint}</p>
-        <span className="mt-3 inline-flex items-center gap-1 text-xs uppercase tracking-[0.18em] text-accent md:mt-6 md:gap-2">
-          {c.cta} <ExternalLink size={11} />
-        </span>
-      </a>
-    );
-  })}
-</div>
+          <div className="grid grid-cols-6 lg:grid-cols-5 gap-px bg-border">
+            {t.contact.cards.map((c, i) => {
+              const Icon = cardIcon(c.kind);
+              return (
+                <a
+                  key={c.kind}
+                  href={cardHref(c.kind)}
+                  target={c.kind === "email" ? undefined : "_blank"}
+                  rel="noreferrer"
+                  className={`group flex flex-col bg-background p-4 transition-colors hover:bg-muted md:p-10 ${
+                    i < 3 ? "col-span-2" : "col-span-3"
+                  } lg:col-span-1`}
+                >
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-accent/15 text-accent md:h-12 md:w-12">
+                    <Icon size={18} />
+                  </span>
+                  <div className="mt-4 text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                    {c.title}
+                  </div>
+                  <div className="mt-1 break-all font-serif text-sm text-primary md:text-xl">{c.value}</div>
+                  <p className="mt-1 hidden text-sm text-muted-foreground md:block">{c.hint}</p>
+                  <span className="mt-3 inline-flex items-center gap-1 text-xs uppercase tracking-[0.18em] text-accent md:mt-6 md:gap-2">
+                    {c.cta} <ExternalLink size={11} />
+                  </span>
+                </a>
+              );
+            })}
+          </div>
 
           <div className="mt-10 flex items-center justify-center gap-3 text-sm text-muted-foreground">
             <Clock size={16} className="shrink-0 text-accent" />
@@ -124,15 +150,16 @@ function ContactPage() {
             </div>
             <div className="mt-6 overflow-hidden border border-border">
               <iframe
-                title="BS Dental Clinic & Aesthetics — Map"
+                title="BS Dental Clinic & Aesthetics - Kashar, Tiranë"
                 src={"https://www.google.com/maps?q=" + CLINIC.lat + "," + CLINIC.lng + "&z=16&output=embed"}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 className="h-80 w-full border-0 lg:h-96"
               />
             </div>
-            
-            <a  href={CLINIC.mapsUrl}
+
+            <a
+              href={CLINIC.mapsUrl}
               target="_blank"
               rel="noreferrer"
               className="mt-4 inline-flex items-center gap-2 self-start text-xs uppercase tracking-[0.18em] text-accent transition-colors hover:text-primary"

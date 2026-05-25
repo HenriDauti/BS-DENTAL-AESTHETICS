@@ -7,12 +7,38 @@ import { SectionHeader } from "@/components/SectionHeader";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { name: "description", content: "Njihuni me BS Dental Clinic & Aesthetics — klinikë moderne dentare dhe estetike në Kashar, Tiranë." },
-      { property: "og:title", content: "Rreth Nesh — BS Dental Clinic & Aesthetics" },
-      { property: "og:description", content: "Klinikë dentare dhe estetike me përkushtim ndaj cilësisë dhe estetikës natyrale." },
-      { property: "og:url", content: "/about" },
+      { title: "Rreth Nesh - BS Dental Clinic & Aesthetics | Dentist Tiranë" },
+      {
+        name: "description",
+        content:
+          "Njihuni me BS Dental Clinic & Aesthetics - klinikë moderne dentare dhe estetike në Kashar, Tiranë. Dr. Bia Sinani & Dr. Miti Sinani. Standarde europiane, rezultate natyrale.",
+      },
+      { name: "robots", content: "index, follow" },
+      { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "BS Dental Clinic & Aesthetics" },
+      { property: "og:title", content: "Rreth Nesh - BS Dental Clinic & Aesthetics" },
+      {
+        property: "og:description",
+        content:
+          "Klinikë dentare dhe estetike me standarde europiane. Mësoni më shumë rreth ekipit tonë dhe filozofisë sonë të kujdesit për pacientin.",
+      },
+      { property: "og:url", content: "https://bsdentalaesthetics.al/about" },
+      { property: "og:image", content: "https://bsdentalaesthetics.al/og-image.jpg" },
     ],
-    links: [{ rel: "canonical", href: "/about" }],
+    links: [{ rel: "canonical", href: "https://bsdentalaesthetics.al/about" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Kryefaqja", item: "https://bsdentalaesthetics.al/" },
+            { "@type": "ListItem", position: 2, name: "Rreth Nesh", item: "https://bsdentalaesthetics.al/about" },
+          ],
+        }),
+      },
+    ],
   }),
   component: AboutPage,
 });
@@ -54,7 +80,6 @@ function AboutPage() {
       <section className="bg-background py-24">
         <div className="container-x">
           <SectionHeader eyebrow={t.home.whyEyebrow} title={t.about.highlightsTitle} />
-          {/* 3 cols on all sizes — always one row */}
           <div className="mt-16 grid grid-cols-3 gap-px bg-border">
             {t.about.highlights.map((h, i) => {
               const Icon = HIGHLIGHT_ICONS[i] ?? Heart;
@@ -76,9 +101,7 @@ function AboutPage() {
       {/* ── Services — left narrative + right list ───────────────────── */}
       <section className="bg-muted py-24">
         <div className="container-x grid gap-16 lg:grid-cols-2 lg:items-start">
-          {/* Left */}
           <div className="lg:sticky lg:top-32">
-            {/* Title centered on mobile */}
             <div className="max-lg:text-center">
               <div className="eyebrow">{t.services.eyebrow}</div>
               <span className="gold-divider mt-4 inline-block" />
@@ -99,7 +122,6 @@ function AboutPage() {
             </div>
           </div>
 
-          {/* Right — service rows */}
           <div className="divide-y divide-border border-y border-border">
             {services.map((s) => (
               <Link
@@ -135,7 +157,6 @@ function AboutPage() {
       <section className="bg-background py-24">
         <div className="container-x grid gap-16 lg:grid-cols-2 lg:items-start">
           <div>
-            {/* Title centered on mobile */}
             <div className="max-lg:text-center">
               <div className="eyebrow">{t.about.missionEyebrow}</div>
               <span className="gold-divider mt-4 inline-block" />
@@ -168,7 +189,7 @@ function AboutPage() {
             &ldquo;{t.about.quote}&rdquo;
           </blockquote>
           <p className="mt-6 text-xs uppercase tracking-[0.24em] text-accent">
-            — {CLINIC.name}
+            - {CLINIC.name}
           </p>
         </div>
       </section>
@@ -177,7 +198,6 @@ function AboutPage() {
       <section className="bg-muted py-24">
         <div className="container-x">
           <SectionHeader eyebrow={t.about.missionEyebrow} title={t.about.valuesTitle} />
-          {/* 2 cols on mobile → 4 cols on lg+ */}
           <div className="mt-12 grid grid-cols-2 gap-px bg-border lg:grid-cols-4">
             {t.about.values.map((v) => (
               <div key={v.title} className="bg-background p-6 md:p-8">
