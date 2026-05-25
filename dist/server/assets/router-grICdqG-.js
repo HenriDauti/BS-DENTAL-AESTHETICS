@@ -1,4 +1,4 @@
-import { r as reactExports, f as functionalUpdate$1, a as arraysEqual, c as createLRUCache, i as isPromise, b as isRedirect, d as isNotFound, e as invariant, g as createControlledPromise, h as rootRouteId, j as isServer$1, k as compileDecodeCharMap, t as trimPath, l as rewriteBasepath, m as composeRewrites, p as processRouteTree, n as processRouteMasks, o as resolvePath, q as cleanPath, s as trimPathRight, u as parseHref, v as executeRewriteInput, w as isDangerousProtocol, x as redirect, y as findSingleMatch, z as deepEqual, D as DEFAULT_PROTOCOL_ALLOWLIST, A as interpolatePath, B as nullReplaceEqualDeep, C as replaceEqualDeep$1, E as last, F as decodePath, G as findFlatMatch, H as findRouteMatch, I as executeRewriteOutput, J as encodePathLikeUrl, K as trimPathLeft, L as joinPaths, M as useRouter, N as dummyMatchContext, O as matchContext, P as requireReactDom, Q as exactPathTest, R as removeTrailingSlash, S as React, T as jsxRuntimeExports, U as isModuleNotFoundError, V as useHydrated, W as escapeHtml, X as isInlinableStylesheet, Y as getAssetCrossOrigin, Z as resolveManifestAssetLink, _ as Outlet } from "./server-BtEOeexM.js";
+import { r as reactExports, f as functionalUpdate$1, a as arraysEqual, c as createLRUCache, i as isPromise, b as isRedirect, d as isNotFound, e as invariant, g as createControlledPromise, h as rootRouteId, j as isServer$1, k as compileDecodeCharMap, t as trimPath, l as rewriteBasepath, m as composeRewrites, p as processRouteTree, n as processRouteMasks, o as resolvePath, q as cleanPath, s as trimPathRight, u as parseHref, v as executeRewriteInput, w as isDangerousProtocol, x as redirect, y as findSingleMatch, z as deepEqual, D as DEFAULT_PROTOCOL_ALLOWLIST, A as interpolatePath, B as nullReplaceEqualDeep, C as replaceEqualDeep$1, E as last, F as decodePath, G as findFlatMatch, H as findRouteMatch, I as executeRewriteOutput, J as encodePathLikeUrl, K as trimPathLeft, L as joinPaths, M as useRouter, N as dummyMatchContext, O as matchContext, P as requireReactDom, Q as exactPathTest, R as removeTrailingSlash, S as React, T as jsxRuntimeExports, U as isModuleNotFoundError, V as useHydrated, W as escapeHtml, X as isInlinableStylesheet, Y as getAssetCrossOrigin, Z as resolveManifestAssetLink, _ as Outlet } from "./server-A1jVNAG6.js";
 var reactUse = reactExports.use;
 function useForwardedRef(ref) {
   const innerRef = reactExports.useRef(null);
@@ -4638,7 +4638,7 @@ var QueryClientProvider = ({
   }, [client]);
   return /* @__PURE__ */ jsxRuntimeExports.jsx(QueryClientContext.Provider, { value: client, children });
 };
-const appCss = "/assets/styles-HLM3iFfP.css";
+const appCss = "/assets/styles-L3TLmowp.css";
 const translations = {
   sq: {
     nav: {
@@ -5319,6 +5319,7 @@ function Header() {
 }
 const COORDS = { lat: 41.324177, lng: 19.780306 };
 const MAP_EMBED = `https://maps.google.com/maps?q=${COORDS.lat},${COORDS.lng}&z=17&output=embed`;
+const NEATLAUNCHES_IG = "https://instagram.com/neatlaunches";
 function Footer() {
   const { t, lang } = useLang();
   const serviceLinks = [
@@ -5330,6 +5331,7 @@ function Footer() {
   ];
   const tagline = lang === "sq" ? "BS Dental Clinic & Aesthetics ofron kujdes dentar profesional me teknologjinë më të fundit dhe përkujdesje personale. Misioni ynë është të krijojmë buzëqeshje të shëndetshme dhe të bukura." : "BS Dental Clinic & Aesthetics delivers professional dental care with the latest technology and a personal touch. Our mission is to create healthy, beautiful smiles.";
   const hours = lang === "sq" ? "E Hënë – E Diel: 09:00–14:00 & 16:00–20:00" : "Monday – Sunday: 09:00–14:00 & 16:00–20:00";
+  const websiteCredit = lang === "sq" ? "Faqja nga" : "Website by";
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("footer", { className: "mt-24 border-t border-border bg-primary text-primary-foreground", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x grid grid-cols-2 gap-10 py-16 lg:grid-cols-4", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "col-span-2 lg:col-span-1", children: [
@@ -5407,13 +5409,38 @@ function Footer() {
         }
       ) })
     ] }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "border-t border-primary-foreground/10 mt-8", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x py-6 text-center text-xs text-primary-foreground/60", children: [
-      "© ",
-      (/* @__PURE__ */ new Date()).getFullYear(),
-      " ",
-      CLINIC.name,
-      ". ",
-      t.footer.rights
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "border-t border-primary-foreground/10 mt-8", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container-x py-6 flex flex-col items-center gap-1.5 text-center text-xs text-primary-foreground/60 sm:flex-row sm:justify-between", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
+        "© ",
+        (/* @__PURE__ */ new Date()).getFullYear(),
+        " ",
+        CLINIC.name,
+        ". ",
+        t.footer.rights
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "flex flex-wrap items-center justify-center gap-x-2 gap-y-0.5", children: [
+        websiteCredit,
+        " ",
+        /* @__PURE__ */ jsxRuntimeExports.jsx(
+          "a",
+          {
+            href: NEATLAUNCHES_IG,
+            target: "_blank",
+            rel: "noreferrer",
+            className: "text-accent/70 transition-colors hover:text-accent",
+            children: "@neatlaunches"
+          }
+        ),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-primary-foreground/30", children: "·" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(
+          "a",
+          {
+            href: "mailto:neatlaunches@gmail.com",
+            className: "text-accent/70 transition-colors hover:text-accent",
+            children: "neatlaunches@gmail.com"
+          }
+        )
+      ] })
     ] }) })
   ] });
 }
@@ -5506,7 +5533,7 @@ function RootComponent() {
     /* @__PURE__ */ jsxRuntimeExports.jsx(ContactFab, {})
   ] }) }) });
 }
-const $$splitComponentImporter$4 = () => import("./services-BDDtcf4Q.js");
+const $$splitComponentImporter$4 = () => import("./services-CFF4nl96.js");
 const Route$4 = createFileRoute("/services")({
   head: () => ({
     meta: [{
@@ -5529,7 +5556,7 @@ const Route$4 = createFileRoute("/services")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$4, "component")
 });
-const $$splitComponentImporter$3 = () => import("./gallery-DHFYgbA7.js");
+const $$splitComponentImporter$3 = () => import("./gallery-CZ_jioxG.js");
 const Route$3 = createFileRoute("/gallery")({
   head: () => ({
     meta: [{
@@ -5552,7 +5579,7 @@ const Route$3 = createFileRoute("/gallery")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$3, "component")
 });
-const $$splitComponentImporter$2 = () => import("./contact-pSazcPiC.js");
+const $$splitComponentImporter$2 = () => import("./contact-CiDVncco.js");
 const Route$2 = createFileRoute("/contact")({
   head: () => ({
     meta: [{
@@ -5575,7 +5602,7 @@ const Route$2 = createFileRoute("/contact")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$2, "component")
 });
-const $$splitComponentImporter$1 = () => import("./about-kcrpE-oO.js");
+const $$splitComponentImporter$1 = () => import("./about-CxHH2PEg.js");
 const Route$1 = createFileRoute("/about")({
   head: () => ({
     meta: [{
@@ -5598,7 +5625,7 @@ const Route$1 = createFileRoute("/about")({
   }),
   component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-const $$splitComponentImporter = () => import("./index-Dpa9KlSo.js");
+const $$splitComponentImporter = () => import("./index-BpbKcx0G.js");
 const Route2 = createFileRoute("/")({
   head: () => ({
     meta: [{

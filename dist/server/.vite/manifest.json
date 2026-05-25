@@ -6,35 +6,35 @@
     "isDynamicEntry": true
   },
   "C:/Users/User/Desktop/neat launches/websites/bs-dental-aesthetics/src/styles.css": {
-    "file": "assets/styles-HLM3iFfP.css",
+    "file": "assets/styles-L3TLmowp.css",
     "src": "C:/Users/User/Desktop/neat launches/websites/bs-dental-aesthetics/src/styles.css"
   },
-  "_SectionHeader-DYVB0aTy.js": {
-    "file": "assets/SectionHeader-DYVB0aTy.js",
+  "_SectionHeader--lt1YRoc.js": {
+    "file": "assets/SectionHeader--lt1YRoc.js",
     "name": "SectionHeader",
     "imports": [
-      "_server-BtEOeexM.js"
+      "_server-A1jVNAG6.js"
     ]
   },
-  "_arrow-right-D-sx4Pdx.js": {
-    "file": "assets/arrow-right-D-sx4Pdx.js",
+  "_arrow-right-qGzoFODA.js": {
+    "file": "assets/arrow-right-qGzoFODA.js",
     "name": "arrow-right",
     "imports": [
-      "_router-BUVDBSpv.js"
+      "_router-grICdqG-.js"
     ]
   },
-  "_check-Sr_gexyS.js": {
-    "file": "assets/check-Sr_gexyS.js",
+  "_check-boYdam9f.js": {
+    "file": "assets/check-boYdam9f.js",
     "name": "check",
     "imports": [
-      "_router-BUVDBSpv.js"
+      "_router-grICdqG-.js"
     ]
   },
-  "_gallery-DlfNjR0L.js": {
-    "file": "assets/gallery-DlfNjR0L.js",
+  "_gallery-Bc5DTdnz.js": {
+    "file": "assets/gallery-Bc5DTdnz.js",
     "name": "gallery",
     "imports": [
-      "_router-BUVDBSpv.js"
+      "_router-grICdqG-.js"
     ],
     "assets": [
       "assets/lips-1-63DwwWx-.jpeg",
@@ -45,12 +45,12 @@
       "assets/whitening-1-BQVQC80v.jpeg"
     ]
   },
-  "_router-BUVDBSpv.js": {
-    "file": "assets/router-BUVDBSpv.js",
+  "_router-grICdqG-.js": {
+    "file": "assets/router-grICdqG-.js",
     "name": "router",
     "isDynamicEntry": true,
     "imports": [
-      "_server-BtEOeexM.js"
+      "_server-A1jVNAG6.js"
     ],
     "dynamicImports": [
       "src/routes/services.tsx?tsr-split=component",
@@ -61,25 +61,25 @@
     ],
     "assets": [
       "assets/logo-zrHsdw-X.png",
-      "assets/styles-HLM3iFfP.css"
+      "assets/styles-L3TLmowp.css"
     ]
   },
-  "_server-BtEOeexM.js": {
-    "file": "assets/server-BtEOeexM.js",
+  "_server-A1jVNAG6.js": {
+    "file": "assets/server-A1jVNAG6.js",
     "name": "server",
     "isDynamicEntry": true,
     "dynamicImports": [
       "tanstack-start-manifest:v",
-      "_router-BUVDBSpv.js",
+      "_router-grICdqG-.js",
       "src/start.ts",
       "%23tanstack-start-plugin-adapters"
     ]
   },
-  "_worker-entry-DRPG0wBI.js": {
-    "file": "assets/worker-entry-DRPG0wBI.js",
+  "_worker-entry-Cqfbn2e-.js": {
+    "file": "assets/worker-entry-Cqfbn2e-.js",
     "name": "worker-entry",
     "dynamicImports": [
-      "_server-BtEOeexM.js"
+      "_server-A1jVNAG6.js"
     ]
   },
   "src/assets/Dentistri Estetike.png": {
@@ -151,52 +151,52 @@
     "src": "src/assets/team/doctor-working.jpeg"
   },
   "src/routes/about.tsx?tsr-split=component": {
-    "file": "assets/about-kcrpE-oO.js",
+    "file": "assets/about-CxHH2PEg.js",
     "name": "about",
     "src": "src/routes/about.tsx?tsr-split=component",
     "isDynamicEntry": true,
     "imports": [
-      "_server-BtEOeexM.js",
-      "_router-BUVDBSpv.js",
-      "_SectionHeader-DYVB0aTy.js",
-      "_arrow-right-D-sx4Pdx.js"
+      "_server-A1jVNAG6.js",
+      "_router-grICdqG-.js",
+      "_SectionHeader--lt1YRoc.js",
+      "_arrow-right-qGzoFODA.js"
     ]
   },
   "src/routes/contact.tsx?tsr-split=component": {
-    "file": "assets/contact-pSazcPiC.js",
+    "file": "assets/contact-CiDVncco.js",
     "name": "contact",
     "src": "src/routes/contact.tsx?tsr-split=component",
     "isDynamicEntry": true,
     "imports": [
-      "_server-BtEOeexM.js",
-      "_router-BUVDBSpv.js",
-      "_arrow-right-D-sx4Pdx.js"
+      "_server-A1jVNAG6.js",
+      "_router-grICdqG-.js",
+      "_arrow-right-qGzoFODA.js"
     ]
   },
   "src/routes/gallery.tsx?tsr-split=component": {
-    "file": "assets/gallery-DHFYgbA7.js",
+    "file": "assets/gallery-CZ_jioxG.js",
     "name": "gallery",
     "src": "src/routes/gallery.tsx?tsr-split=component",
     "isDynamicEntry": true,
     "imports": [
-      "_server-BtEOeexM.js",
-      "_router-BUVDBSpv.js",
-      "_gallery-DlfNjR0L.js",
-      "_arrow-right-D-sx4Pdx.js"
+      "_server-A1jVNAG6.js",
+      "_router-grICdqG-.js",
+      "_gallery-Bc5DTdnz.js",
+      "_arrow-right-qGzoFODA.js"
     ]
   },
   "src/routes/index.tsx?tsr-split=component": {
-    "file": "assets/index-Dpa9KlSo.js",
+    "file": "assets/index-BpbKcx0G.js",
     "name": "index",
     "src": "src/routes/index.tsx?tsr-split=component",
     "isDynamicEntry": true,
     "imports": [
-      "_server-BtEOeexM.js",
-      "_router-BUVDBSpv.js",
-      "_SectionHeader-DYVB0aTy.js",
-      "_gallery-DlfNjR0L.js",
-      "_arrow-right-D-sx4Pdx.js",
-      "_check-Sr_gexyS.js"
+      "_server-A1jVNAG6.js",
+      "_router-grICdqG-.js",
+      "_SectionHeader--lt1YRoc.js",
+      "_gallery-Bc5DTdnz.js",
+      "_arrow-right-qGzoFODA.js",
+      "_check-boYdam9f.js"
     ],
     "assets": [
       "assets/hero-vrfxoig4.jpg",
@@ -205,15 +205,15 @@
     ]
   },
   "src/routes/services.tsx?tsr-split=component": {
-    "file": "assets/services-BDDtcf4Q.js",
+    "file": "assets/services-CFF4nl96.js",
     "name": "services",
     "src": "src/routes/services.tsx?tsr-split=component",
     "isDynamicEntry": true,
     "imports": [
-      "_server-BtEOeexM.js",
-      "_router-BUVDBSpv.js",
-      "_check-Sr_gexyS.js",
-      "_arrow-right-D-sx4Pdx.js"
+      "_server-A1jVNAG6.js",
+      "_router-grICdqG-.js",
+      "_check-boYdam9f.js",
+      "_arrow-right-qGzoFODA.js"
     ],
     "assets": [
       "assets/Dentistri Estetike-DbliDOxo.png",
@@ -224,16 +224,16 @@
     ]
   },
   "src/start.ts": {
-    "file": "assets/start-O6PlZhsU.js",
+    "file": "assets/start-gNTb81E5.js",
     "name": "start",
     "src": "src/start.ts",
     "isDynamicEntry": true,
     "imports": [
-      "_worker-entry-DRPG0wBI.js"
+      "_worker-entry-Cqfbn2e-.js"
     ]
   },
   "tanstack-start-manifest:v": {
-    "file": "assets/_tanstack-start-manifest_v-BHNXOq2y.js",
+    "file": "assets/_tanstack-start-manifest_v-wWME5PXn.js",
     "name": "_tanstack-start-manifest_v",
     "src": "tanstack-start-manifest:v",
     "isDynamicEntry": true
@@ -244,7 +244,7 @@
     "src": "virtual:cloudflare/worker-entry",
     "isEntry": true,
     "imports": [
-      "_worker-entry-DRPG0wBI.js"
+      "_worker-entry-Cqfbn2e-.js"
     ]
   }
 }

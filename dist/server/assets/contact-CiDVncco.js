@@ -1,6 +1,6 @@
-import { r as reactExports, T as jsxRuntimeExports } from "./server-BtEOeexM.js";
-import { c as createLucideIcon, u as useLang, t as translations, C as Clock, a as CLINIC, M as MapPin, b as Mail, P as Phone, I as Instagram } from "./router-BUVDBSpv.js";
-import { A as ArrowRight } from "./arrow-right-D-sx4Pdx.js";
+import { r as reactExports, T as jsxRuntimeExports } from "./server-A1jVNAG6.js";
+import { c as createLucideIcon, u as useLang, t as translations, C as Clock, a as CLINIC, M as MapPin, b as Mail, P as Phone, I as Instagram } from "./router-grICdqG-.js";
+import { A as ArrowRight } from "./arrow-right-qGzoFODA.js";
 import "node:async_hooks";
 import "node:stream/web";
 import "node:stream";
